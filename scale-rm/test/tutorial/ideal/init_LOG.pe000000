@@ -1,0 +1,1874 @@
+ 
+                                                -+++++++++;              
+                                              ++++++++++++++=            
+                                            ++++++++++++++++++-          
+                                           +++++++++++++++++++++         
+                                         .+++++++++++++++++++++++        
+                                         +++++++++++++++++++++++++       
+                                        +++++++++++++++++++++++++++      
+                                       =++++++=x######+++++++++++++;     
+                                      .++++++X####XX####++++++++++++     
+          =+xxx=,               ++++  +++++=##+       .###++++++++++-    
+       ,xxxxxxxxxx-            +++++.+++++=##           .##++++++++++    
+      xxxxxxxxxxxxx           -+++x#;+++++#+              ##+++++++++.   
+     xxxxxxxx##xxxx,          ++++# +++++XX                #+++++++++-   
+    xxxxxxx####+xx+x         ++++#.++++++#                  #+++++++++   
+   +xxxxxX#X   #Xx#=        =+++#x=++++=#.                  x=++++++++   
+   xxxxxx#,    x###        .++++#,+++++#=                    x++++++++   
+  xxxxxx#.                 ++++# +++++x#                     #++++++++   
+  xxxxxx+                 ++++#-+++++=#                      #++++++++   
+ ,xxxxxX                 -+++XX-+++++#,                      +++++++++   
+ =xxxxxX                .++++#.+++++#x                       -++++++++   
+ +xxxxx=                ++++#.++++++#                        ++++++++#   
+ xxxxxx;               ++++#+=++++=#                         ++++++++#   
+ xxxxxxx              ,+++x#,+++++#-                        ;++++++++-   
+ #xxxxxx              +++=# +++++xX                         ++++++++#    
+ xxxxxxxx            ++++#-+++++=#                         +++++++++X    
+ -+xxxxxx+          ++++X#-++++=#.            -++;        =++++++++#     
+  #xxxxxxxx.      .+++++# +++++#x            =++++-      +++++++++XX     
+  #xxxxxxxxxx=--=++++++#.++++++#             ++++++    -+++++++++x#      
+   #+xxxxxxxxxx+++++++#x=++++=#              ++++++;=+++++++++++x#       
+   =#+xxxxxxxx+++++++##,+++++#=             =++++++++++++++++++##.       
+    X#xxxxxxxx++++++## +++++x#              ;x++++++++++++++++##.        
+     x##+xxxx+++++x## +++++=#                ##++++++++++++x##X          
+      ,###Xx+++x###x -++++=#,                .####x+++++X####.           
+        -########+   -#####x                   .X#########+.             
+            .,.      ......                         .,.                  
+                                                                         
+     .X#######     +###-        =###+           ###x         x########   
+    .#########    ######X      #######         ####        .#########x   
+    ####+++++=   X#######.    -#######x       .###;        ####x+++++.   
+    ###          ###= ####    #### x###       ####        -###.          
+   .###         ####   ###+  X###   ###X     =###.        ####           
+    ###-       ;###,        .###+   -###     ####        x##########+    
+    +####x     ####         ####     ####   ####         ###########.    
+     x######. =###          ###,     .###-  ###+        x###--------     
+       =##### X###         -###       #### ,###         ####             
+         .###=x###;        .###+       ###X ###X        ####.            
+  ###########; ###########+ ###########     ########### ,##########.     
+ -###########  ,##########,  #########X      ##########  +#########      
+ ,,,,,,,,,,.     ,,,,,,,,,    .,,,,,,,.       .,,,,,,,,    ,,,,,,,,      
+                                                                         
+     SCALE : Scalable Computing by Advanced Library and Environment      
+ 
+ SCALE Library ver. 5.5.1
+ SCALE-RM ver. 5.5.1
+
+INFO  [IO_LOG_setup] Setup
+INFO  [IO_LOG_setup] Open config file, FID =  10
+INFO  [IO_LOG_setup] Open log    file, FID =  11
+INFO  [IO_LOG_setup] basename of log file  = init_LOG
+
+INFO  [IO_LOG_setup] The used config is output to the log.
+
+INFO  [ADMIN_versioncheck] Check version
+INFO  [ADMIN_versioncheck] Obsolete namelists were not found. OK.
+
+INFO  [PRC_CARTESC_setup] Setup
+
++++++ start making Cartesian topology
+
+INFO  [PRC_CARTESC_setup] Process information 
+      UNIVERSAL_COMM_WORLD        :            0
+      total process [UNIVERSAL]   :            2
+      my process ID [UNIVERSAL]   :            0
+      master rank?  [UNIVERSAL]   :            T
+      GLOBAL_COMM_WORLD           :            0
+      total process [GLOBAL]      :            2
+      my process ID [GLOBAL]      :            0
+      master rank?  [GLOBAL]      :            T
+      LOCAL_COMM_WORLD            :            0
+      total process [LOCAL]       :            2
+      my process ID [LOCAL]       :            0
+      master rank?  [LOCAL]       :            T
+      ABORT_COMM_WORLD            :            0
+      master rank ID [each world] :            0
+&PARAM_PRC_CARTESC
+ PRC_NUM_X=1          ,
+ PRC_NUM_Y=2          ,
+ PRC_PERIODIC_X=T,
+ PRC_PERIODIC_Y=T,
+ PRC_CART_REORDER=F,
+ /
+
+INFO  [PRC_CARTESC_setup] Process allocation 
+      No. of Node   :           1  x            2
+INFO  [PRC_CARTESC_setup] Node topology :
+      NW(    1,    0,    1) -  N(    1,    0,    1) - NE(    1,    0,    1)
+                   |                       |                       |
+       W(    0,    0,    0) -  P(    0,    0,    0) -  E(    0,    0,    0)
+                   |                       |                       |
+      SW(    1,    0,    1) -  S(    1,    0,    1) - SE(    1,    0,    1)
+
+INFO  [PROF_setup] Setup
+INFO  [PROF_setup] Not found namelist. Default used.
+&PARAM_PROF
+ PROF_RAP_LEVEL=2          ,
+ PROF_MPI_BARRIER=F,
+ /
+
+INFO  [PROF_setup] Rap output level              =            2
+INFO  [PROF_setup] Add MPI_barrier in every rap? =  F
+
+INFO  [CONST_setup] Setup
+INFO  [CONST_setup] Not found namelist. Default used.
+&PARAM_CONST
+ CONST_RADIUS=  6371220.0000000000     ,
+ CONST_OHM=  7.2920000000000000E-005,
+ CONST_GRAV=  9.8066499999999994     ,
+ CONST_RDRY=  287.04000000000002     ,
+ CONST_CPDRY=  1004.6400000000000     ,
+ CONST_LAPS=  6.4999999999999997E-003,
+ CONST_PSTD=  101325.00000000000     ,
+ CONST_PRE00=  100000.00000000000     ,
+ CONST_TSTD=  288.14999999999998     ,
+ CONST_THERMODYN_TYPE="EXACT                           ",
+ CONST_SMALLPLANETFACTOR=  1.0000000000000000     ,
+ /
+
+INFO  [CONST_setup] List of constants 
+      PI                                                : PI      =    3.1415926535897931     
+      Small number                                      : EPS     =    2.2204460492503131E-016
+      Small number (1-EPS)                              : EPS1    =   0.99999999999999978     
+      Huge  number                                      : HUGE    =    1.7976931348623157E+308
+      undefined number (INT2)                           : UNDEF2  =       -32768
+      undefined number (REAL,general use)               : UNDEF   =   -9.9998999999999996E+030
+      undefined number (REAL4)                          : UNDEF4  =   -9.99990011E+30
+      undefined number (REAL8)                          : UNDEF8  =   -9.9998999999999996E+030
+      radius of the planet                          [m] : RADIUS  =    6371220.0000000000     
+      angular velocity of the planet              [1/s] : OHM     =    7.2920000000000000E-005
+      standard acceleration of gravity           [m/s2] : GRAV    =    9.8066499999999994     
+      Stefan-Boltzman constant                [W/m2/K4] : STB     =    5.6703730000000003E-008
+      von Karman constant                               : KARMAN  =   0.40000000000000002     
+      universal gas constant                  [J/mol/K] : R       =    8.3143600000000006     
+      mass weight (dry air)                     [g/mol] : Mdry    =    28.966000000000001     
+      specific gas constant (dry air)          [J/kg/K] : Rdry    =    287.04000000000002     
+      specific heat (dry air, const. pressure) [J/kg/K] : CPdry   =    1004.6400000000000     
+      specific heat (dry air, const. volume)   [J/kg/K] : Cvdry   =    717.59999999999991     
+      lapse rate of ISA                           [K/m] : LAPS    =    6.4999999999999997E-003
+      dry adiabatic lapse rate                    [K/m] : LAPSdry =    9.7613573021181708E-003
+      mass weight (water vapor)                 [g/mol] : Mvap    =    18.015999999999998     
+      specific gas constant (water vapor)      [J/kg/K] : Rvap    =    461.50000000000000     
+      specific heat (vapor, const. pressure)   [J/kg/K] : CPvap   =    1846.0000000000000     
+      specific heat (vapor, const. volume)     [J/kg/K] : CVvap   =    1384.5000000000000     
+      specific heat (liquid water)             [J/kg/K] : CL      =    4218.0000000000000     
+      specific heat (ice)                      [J/kg/K] : CI      =    2106.0000000000000     
+      Rdry / Rvap                                       : EPSvap  =   0.62197183098591557     
+      1 / EPSvap - 1                                    : EPSTvap =   0.60778985507246364     
+      latent heat of vaporizaion at 0C           [J/kg] : LHV0    =    2501000.0000000000     
+      latent heat of sublimation at 0C           [J/kg] : LHS0    =    2834000.0000000000     
+      latent heat of fusion      at 0C           [J/kg] : LHF0    =    333000.00000000000     
+      latent heat of vaporizaion at 0K           [J/kg] : LHV00   =    3148911.7999999998     
+      latent heat of sublimation at 0K           [J/kg] : LHS00   =    2905019.0000000000     
+      latent heat of fusion      at 0K           [J/kg] : LHF00   =   -243892.79999999993     
+      Thermodynamics calculation type : EXACT
+      saturate pressure of water vapor at 0C       [Pa] : PSAT0   =    610.77999999999997     
+      density of water                          [kg/m3] : DWATR   =    1000.0000000000000     
+      density of ice                            [kg/m3] : DICE    =    916.79999999999995     
+      speed of sound (dry air at 0C)              [m/s] : SOUND   =    331.31098140568781     
+      standard pressure                            [Pa] : Pstd    =    101325.00000000000     
+      pressure reference                           [Pa] : PRE00   =    100000.00000000000     
+      standard temperature (15C)                    [K] : Tstd    =    288.14999999999998     
+      temperature reference (0C)                    [K] : TEM00   =    273.14999999999998     
+
+INFO  [CALENDAR_setup] Setup
+INFO  [CALENDAR_setup] Not found namelist. Default used.
+&PARAM_CALENDAR
+ CALENDAR_360DAYS=F,
+ CALENDAR_365DAYS=F,
+ CALENDAR_HOUR=  24.000000000000000     ,
+ CALENDAR_MIN=  60.000000000000000     ,
+ CALENDAR_SEC=  60.000000000000000     ,
+ CALENDAR_USER_DEFINED= 12*0          ,
+ DEBUG=F,
+ /
+
+INFO  [CALENDAR_setup] Calendar settings
+      DayOfYear = 365 or 366 : Gregorian calendar
+
+INFO  [RANDOM_setup] Setup
+INFO  [RANDOM_setup] Not found namelist. Default used.
+&PARAM_RANDOM
+ RANDOM_FIX=F,
+ /
+
+INFO  [RANDOM_setup] Array size for random seed:           8
+
+INFO  [ATMOS_ADMIN_setup] Setup
+&PARAM_ATMOS
+ ATMOS_DO=T,
+ ATMOS_DYN_TYPE="HEVI                            ",
+ ATMOS_PHY_MP_TYPE="TOMITA08                        ",
+ ATMOS_PHY_AE_TYPE="NONE                            ",
+ ATMOS_PHY_CH_TYPE="NONE                            ",
+ ATMOS_PHY_RD_TYPE="NONE                            ",
+ ATMOS_PHY_SF_TYPE="NONE                            ",
+ ATMOS_PHY_TB_TYPE="NONE                            ",
+ ATMOS_PHY_BL_TYPE="NONE                            ",
+ ATMOS_PHY_CP_TYPE="NONE                            ",
+ ATMOS_PHY_PRECIP_TYPE="Upwind-Euler                    ",
+ ATMOS_USE_QV=F,
+ ATMOS_PHY_LT_TYPE="NONE                            ",
+ ATMOS_USE_AVERAGE=F,
+ /
+
+INFO  [ATMOS_ADMIN_setup] Atmosphere model components 
+      Atmosphere model       : ON
+      Dynamics...
+      + Dynamical core       : ON, HEVI
+      + Advection            : ON
+      Physics...
+      + Cloud Microphysics   : ON, TOMITA08
+      + Aerosol Microphysics : OFF
+      + Chemistry            : OFF
+      + Radiative transfer   : OFF
+      + Surface Flux         : OFF
+      + Sub-grid Turbulence  : OFF
+      + PBL Turbulence       : OFF
+      + Convection Param.    : OFF
+      + Lightning            : OFF
+      + Use time-averaging value for physics? : NO
+
+INFO  [OCEAN_ADMIN_setup] Setup
+INFO  [OCEAN_ADMIN_setup] Not found namelist. Default used.
+&PARAM_OCEAN
+ OCEAN_DYN_TYPE="NONE                            ",
+ OCEAN_ICE_TYPE="NONE                            ",
+ OCEAN_SFC_TYPE="FIXED-TEMP                      ",
+ OCEAN_ALB_TYPE="NAKAJIMA00                      ",
+ OCEAN_RGN_TYPE="MOON07                          ",
+ /
+
+INFO  [OCEAN_ADMIN_setup] Ocean model components 
+      Ocean model             : OFF
+
+INFO  [LAND_ADMIN_setup] Setup
+INFO  [LAND_ADMIN_setup] Not found namelist. Default used.
+&PARAM_LAND
+ LAND_DYN_TYPE="NONE                            ",
+ LAND_SFC_TYPE="SKIN                            ",
+ SNOW_TYPE="NONE                            ",
+ /
+
+INFO  [LAND_ADMIN_setup] Land model components 
+      Land model           : OFF
+
+INFO  [URBAN_ADMIN_setup] Setup
+INFO  [URBAN_ADMIN_setup] Not found namelist. Default used.
+&PARAM_URBAN
+ URBAN_DYN_TYPE="NONE                            ",
+ /
+
+INFO  [URBAN_ADMIN_setup] Urban model components 
+      Urban model : OFF
+
+INFO  [LAKE_ADMIN_setup] Setup
+
+INFO  [LAKE_ADMIN_setup] Lake model components 
+      Lake model : OFF
+
+INFO  [CPL_ADMIN_setup] Setup
+
+INFO  [CPL_ADMIN_setup] Coupler components 
+      Coupler : OFF
+
+INFO  [ATMOS_GRID_CARTESC_index_setup_main] Setup
+&PARAM_ATMOS_GRID_CARTESC_INDEX
+ KMAX=97         ,
+ IMAXG=1          ,
+ JMAXG=40         ,
+ IMAX=-1         ,
+ JMAX=-1         ,
+ IHALO=2          ,
+ JHALO=2          ,
+ IBLOCK=-1         ,
+ JBLOCK=-1         ,
+ /
+
+INFO  [ATMOS_GRID_CARTESC_index_setup_main] Atmosphere grid index information 
+      No. of Computational Grid (global)  :    97 x      1 x     40
+      Global index of local grid (X)      :     1 -      1
+      Global index of local grid (Y)      :     3 -     22
+
+      No. of Computational Grid (local)   :    97 x      1 x     20
+      No. of Grid (including HALO, local) :   101 x      1 x     24
+      Local index of inner grid (X)       :     1 -      1
+      Local index of inner grid (Y)       :     3 -     22
+
+INFO  [ATMOS_GRID_CARTESC_setup] Setup
+&PARAM_ATMOS_GRID_CARTESC
+ ATMOS_GRID_CARTESC_IN_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ ATMOS_GRID_CARTESC_IN_AGGREGATE=F,
+ DZ=  0.0000000000000000     ,
+ DX=  500.00000000000000     ,
+ DY=  500.00000000000000     ,
+ BUFFER_DZ=  0.0000000000000000     ,
+ BUFFER_DX=  0.0000000000000000     ,
+ BUFFER_DY=  0.0000000000000000     ,
+ BUFFER_NZ=-1         ,
+ BUFFER_NX=-1         ,
+ BUFFER_NY=-1         ,
+ BUFFFACT=  1.0000000000000000     ,
+ BUFFFACT_Z= -1.0000000000000000     ,
+ BUFFFACT_X= -1.0000000000000000     ,
+ BUFFFACT_Y= -1.0000000000000000     ,
+ FZ=  80.000000000000000     ,  168.00000190734863     ,  264.80000610351567     ,  371.28001302719133     ,  488.40802318191578     ,
+   617.24883714466205     ,  758.97373557548735     ,  914.87112722838003     ,  1064.8711272283799     ,  1214.8711272283799     ,  1364.8711272283799     ,
+   1514.8711272283799     ,  1664.8711272283799     ,  1814.8711272283799     ,  1964.8711272283799     ,  2114.8711272283799     ,  2264.8711272283799     ,
+   2414.8711272283799     ,  2564.8711272283799     ,  2714.8711272283799     ,  2864.8711272283799     ,  3014.8711272283799     ,  3164.8711272283799     ,
+   3314.8711272283799     ,  3464.8711272283799     ,  3614.8711272283799     ,  3764.8711272283799     ,  3914.8711272283799     ,  4064.8711272283799     ,
+   4214.8711272283799     ,  4364.8711272283799     ,  4514.8711272283799     ,  4664.8711272283799     ,  4814.8711272283799     ,  4964.8711272283799     ,
+   5114.8711272283799     ,  5264.8711272283799     ,  5414.8711272283799     ,  5564.8711272283799     ,  5714.8711272283799     ,  5864.8711272283799     ,
+   6014.8711272283799     ,  6164.8711272283799     ,  6314.8711272283799     ,  6464.8711272283799     ,  6614.8711272283799     ,  6764.8711272283799     ,
+   6914.8711272283799     ,  7064.8711272283799     ,  7214.8711272283799     ,  7364.8711272283799     ,  7514.8711272283799     ,  7664.8711272283799     ,
+   7814.8711272283799     ,  7964.8711272283799     ,  8114.8711272283799     ,  8264.8711272283799     ,  8414.8711272283799     ,  8564.8711272283799     ,
+   8714.8711272283799     ,  8864.8711272283799     ,  9014.8711272283799     ,  9164.8711272283799     ,  9314.8711272283799     ,  9464.8711272283799     ,
+   9614.8711272283799     ,  9764.8711272283799     ,  9914.8711272283799     ,  10064.871127228380     ,  10214.871127228380     ,  10364.871127228380     ,
+   10514.871127228380     ,  10664.871127228380     ,  10814.871127228380     ,  10964.871127228380     ,  11114.871127228380     ,  11264.871127228380     ,
+   11414.871127228380     ,  11564.871127228380     ,  11714.871127228380     ,  11864.871127228380     ,  12014.871127228380     ,  12187.371127228380     ,
+   12385.746127228380     ,  12613.877377228380     ,  12876.228314728380     ,  13177.931892853379     ,  13524.891007697130     ,  13923.893989767443     ,
+   14382.747419148302     ,  14910.428862936289     ,  15517.262523292475     ,  16215.121232702089     ,  17017.658748523147     ,  17940.576891717363     ,
+   19001.932756390710     ,  20222.492000765058     , 203*-1.0000000000000000      ,
+ OFFSET_X=  0.0000000000000000     ,
+ OFFSET_Y=  0.0000000000000000     ,
+ /
+INFO  [ATMOS_GRID_CARTESC_generate] Z coordinate is given from NAMELIST.
+
+INFO  [ATMOS_GRID_CARTESC_generate] Grid information 
+      delta Z, X, Y [m]        :     0.000   500.000   500.000
+
+INFO  [ATMOS_GRID_CARTESC_generate] Main/buffer Grid (global) :
+      Z: buffer =      0 x 1, main =     97
+      X: buffer =      0 x 2, main =      1
+      Y: buffer =      0 x 2, main =     40
+
+INFO  [ATMOS_GRID_CARTESC_generate] Domain size [km] (global) :
+      Z:   -0.160 -HALO-                        0.000 |     0.040 -    19.612 |    20.222 -buffer-    20.222 -HALO-    22.664
+      X:    0.000 -HALO-     0.000 -buffer-     0.000 |     0.250 -     0.250 |     0.500 -buffer-     0.500 -HALO-     0.500
+      Y:   -1.000 -HALO-     0.000 -buffer-     0.000 |     0.250 -    19.750 |    20.000 -buffer-    20.000 -HALO-    21.000
+
+INFO  [ATMOS_GRID_CARTESC_output_info] Center Position of Grid (global) :
+      X:      250.000
+      Y:    10000.000
+
+INFO  [ATMOS_GRID_CARTESC_output_info] Domain size [km] (local) :
+      X:    0.000 -HALO-     0.000 |     0.250 -     0.250 |     0.500 -HALO-     0.500
+      Y:   -1.000 -HALO-     0.000 |     0.250 -     9.750 |    10.000 -HALO-    11.000
+
+INFO  [ATMOS_GRID_CARTESC_output_info] Vertical Coordinate
+      |===============================================|
+      |    k        z       zh       dz   buffer    k |
+      |           [m]      [m]      [m]   factor      |
+      |               22663.61              1.00  101 |
+      |  101 22053.33           1220.56     1.00      |
+      |               21443.05              1.00  100 |
+      |  100 20832.77           1220.56     1.00      |
+      |               20222.49              0.00   99 | KE = TOA
+      |   99 19612.21           1220.56     0.00      |
+      |               19001.93              0.00   98 |
+      |   98 18471.25           1061.36     0.00      |
+      |               17940.58              0.00   97 |
+      |   97 17479.12            922.92     0.00      |
+      |               17017.66              0.00   96 |
+      |   96 16616.39            802.54     0.00      |
+      |               16215.12              0.00   95 |
+      |   95 15866.19            697.86     0.00      |
+      |               15517.26              0.00   94 |
+      |   94 15213.85            606.83     0.00      |
+      |               14910.43              0.00   93 |
+      |   93 14646.59            527.68     0.00      |
+      |               14382.75              0.00   92 |
+      |   92 14153.32            458.85     0.00      |
+      |               13923.89              0.00   91 |
+      |   91 13724.39            399.00     0.00      |
+      |               13524.89              0.00   90 |
+      |   90 13351.41            346.96     0.00      |
+      |               13177.93              0.00   89 |
+      |   89 13027.08            301.70     0.00      |
+      |               12876.23              0.00   88 |
+      |   88 12745.05            262.35     0.00      |
+      |               12613.88              0.00   87 |
+      |   87 12499.81            228.13     0.00      |
+      |               12385.75              0.00   86 |
+      |   86 12286.56            198.38     0.00      |
+      |               12187.37              0.00   85 |
+      |   85 12101.12            172.50     0.00      |
+      |               12014.87              0.00   84 |
+      |   84 11939.87            150.00     0.00      |
+      |               11864.87              0.00   83 |
+      |   83 11789.87            150.00     0.00      |
+      |               11714.87              0.00   82 |
+      |   82 11639.87            150.00     0.00      |
+      |               11564.87              0.00   81 |
+      |   81 11489.87            150.00     0.00      |
+      |               11414.87              0.00   80 |
+      |   80 11339.87            150.00     0.00      |
+      |               11264.87              0.00   79 |
+      |   79 11189.87            150.00     0.00      |
+      |               11114.87              0.00   78 |
+      |   78 11039.87            150.00     0.00      |
+      |               10964.87              0.00   77 |
+      |   77 10889.87            150.00     0.00      |
+      |               10814.87              0.00   76 |
+      |   76 10739.87            150.00     0.00      |
+      |               10664.87              0.00   75 |
+      |   75 10589.87            150.00     0.00      |
+      |               10514.87              0.00   74 |
+      |   74 10439.87            150.00     0.00      |
+      |               10364.87              0.00   73 |
+      |   73 10289.87            150.00     0.00      |
+      |               10214.87              0.00   72 |
+      |   72 10139.87            150.00     0.00      |
+      |               10064.87              0.00   71 |
+      |   71  9989.87            150.00     0.00      |
+      |                9914.87              0.00   70 |
+      |   70  9839.87            150.00     0.00      |
+      |                9764.87              0.00   69 |
+      |   69  9689.87            150.00     0.00      |
+      |                9614.87              0.00   68 |
+      |   68  9539.87            150.00     0.00      |
+      |                9464.87              0.00   67 |
+      |   67  9389.87            150.00     0.00      |
+      |                9314.87              0.00   66 |
+      |   66  9239.87            150.00     0.00      |
+      |                9164.87              0.00   65 |
+      |   65  9089.87            150.00     0.00      |
+      |                9014.87              0.00   64 |
+      |   64  8939.87            150.00     0.00      |
+      |                8864.87              0.00   63 |
+      |   63  8789.87            150.00     0.00      |
+      |                8714.87              0.00   62 |
+      |   62  8639.87            150.00     0.00      |
+      |                8564.87              0.00   61 |
+      |   61  8489.87            150.00     0.00      |
+      |                8414.87              0.00   60 |
+      |   60  8339.87            150.00     0.00      |
+      |                8264.87              0.00   59 |
+      |   59  8189.87            150.00     0.00      |
+      |                8114.87              0.00   58 |
+      |   58  8039.87            150.00     0.00      |
+      |                7964.87              0.00   57 |
+      |   57  7889.87            150.00     0.00      |
+      |                7814.87              0.00   56 |
+      |   56  7739.87            150.00     0.00      |
+      |                7664.87              0.00   55 |
+      |   55  7589.87            150.00     0.00      |
+      |                7514.87              0.00   54 |
+      |   54  7439.87            150.00     0.00      |
+      |                7364.87              0.00   53 |
+      |   53  7289.87            150.00     0.00      |
+      |                7214.87              0.00   52 |
+      |   52  7139.87            150.00     0.00      |
+      |                7064.87              0.00   51 |
+      |   51  6989.87            150.00     0.00      |
+      |                6914.87              0.00   50 |
+      |   50  6839.87            150.00     0.00      |
+      |                6764.87              0.00   49 |
+      |   49  6689.87            150.00     0.00      |
+      |                6614.87              0.00   48 |
+      |   48  6539.87            150.00     0.00      |
+      |                6464.87              0.00   47 |
+      |   47  6389.87            150.00     0.00      |
+      |                6314.87              0.00   46 |
+      |   46  6239.87            150.00     0.00      |
+      |                6164.87              0.00   45 |
+      |   45  6089.87            150.00     0.00      |
+      |                6014.87              0.00   44 |
+      |   44  5939.87            150.00     0.00      |
+      |                5864.87              0.00   43 |
+      |   43  5789.87            150.00     0.00      |
+      |                5714.87              0.00   42 |
+      |   42  5639.87            150.00     0.00      |
+      |                5564.87              0.00   41 |
+      |   41  5489.87            150.00     0.00      |
+      |                5414.87              0.00   40 |
+      |   40  5339.87            150.00     0.00      |
+      |                5264.87              0.00   39 |
+      |   39  5189.87            150.00     0.00      |
+      |                5114.87              0.00   38 |
+      |   38  5039.87            150.00     0.00      |
+      |                4964.87              0.00   37 |
+      |   37  4889.87            150.00     0.00      |
+      |                4814.87              0.00   36 |
+      |   36  4739.87            150.00     0.00      |
+      |                4664.87              0.00   35 |
+      |   35  4589.87            150.00     0.00      |
+      |                4514.87              0.00   34 |
+      |   34  4439.87            150.00     0.00      |
+      |                4364.87              0.00   33 |
+      |   33  4289.87            150.00     0.00      |
+      |                4214.87              0.00   32 |
+      |   32  4139.87            150.00     0.00      |
+      |                4064.87              0.00   31 |
+      |   31  3989.87            150.00     0.00      |
+      |                3914.87              0.00   30 |
+      |   30  3839.87            150.00     0.00      |
+      |                3764.87              0.00   29 |
+      |   29  3689.87            150.00     0.00      |
+      |                3614.87              0.00   28 |
+      |   28  3539.87            150.00     0.00      |
+      |                3464.87              0.00   27 |
+      |   27  3389.87            150.00     0.00      |
+      |                3314.87              0.00   26 |
+      |   26  3239.87            150.00     0.00      |
+      |                3164.87              0.00   25 |
+      |   25  3089.87            150.00     0.00      |
+      |                3014.87              0.00   24 |
+      |   24  2939.87            150.00     0.00      |
+      |                2864.87              0.00   23 |
+      |   23  2789.87            150.00     0.00      |
+      |                2714.87              0.00   22 |
+      |   22  2639.87            150.00     0.00      |
+      |                2564.87              0.00   21 |
+      |   21  2489.87            150.00     0.00      |
+      |                2414.87              0.00   20 |
+      |   20  2339.87            150.00     0.00      |
+      |                2264.87              0.00   19 |
+      |   19  2189.87            150.00     0.00      |
+      |                2114.87              0.00   18 |
+      |   18  2039.87            150.00     0.00      |
+      |                1964.87              0.00   17 |
+      |   17  1889.87            150.00     0.00      |
+      |                1814.87              0.00   16 |
+      |   16  1739.87            150.00     0.00      |
+      |                1664.87              0.00   15 |
+      |   15  1589.87            150.00     0.00      |
+      |                1514.87              0.00   14 |
+      |   14  1439.87            150.00     0.00      |
+      |                1364.87              0.00   13 |
+      |   13  1289.87            150.00     0.00      |
+      |                1214.87              0.00   12 |
+      |   12  1139.87            150.00     0.00      |
+      |                1064.87              0.00   11 |
+      |   11   989.87            150.00     0.00      |
+      |                 914.87              0.00   10 |
+      |   10   836.92            155.90     0.00      |
+      |                 758.97              0.00    9 |
+      |    9   688.11            141.72     0.00      |
+      |                 617.25              0.00    8 |
+      |    8   552.83            128.84     0.00      |
+      |                 488.41              0.00    7 |
+      |    7   429.84            117.13     0.00      |
+      |                 371.28              0.00    6 |
+      |    6   318.04            106.48     0.00      |
+      |                 264.80              0.00    5 |
+      |    5   216.40             96.80     0.00      |
+      |                 168.00              0.00    4 |
+      |    4   124.00             88.00     0.00      |
+      |                  80.00              0.00    3 |
+      |    3    40.00             80.00     0.00      |
+      |                   0.00              0.00    2 | KS-1 = surface
+      |    2   -40.00             80.00     0.00      |
+      |                 -80.00              0.00    1 |
+      |    1  -120.00             80.00     0.00      |
+      |                -160.00              0.00    0 |
+      |===============================================|
+
+INFO  [ATMOS_HYDROMETEOR_setup] Setup
+
+INFO  [ATMOS_driver_tracer_setup] Setup
+
+INFO  [ATMOS_PHY_MP_driver_tracer_setup] Setup
+
+INFO  [TRACER_regist] ] Register tracer : No.  1, NAME = QV                      , CV = 1384.5, CP = 1846.0, ENGI0 =  3.149E+06, ADVC = T, MASS = T
+INFO  [TRACER_regist] ] Register tracer : No.  2, NAME = QC                      , CV = 4218.0, CP = 4218.0, ENGI0 =  0.000E+00, ADVC = T, MASS = T
+INFO  [TRACER_regist] ] Register tracer : No.  3, NAME = QR                      , CV = 4218.0, CP = 4218.0, ENGI0 =  0.000E+00, ADVC = T, MASS = T
+INFO  [TRACER_regist] ] Register tracer : No.  4, NAME = QI                      , CV = 2106.0, CP = 2106.0, ENGI0 =  2.439E+05, ADVC = T, MASS = T
+INFO  [TRACER_regist] ] Register tracer : No.  5, NAME = QS                      , CV = 2106.0, CP = 2106.0, ENGI0 =  2.439E+05, ADVC = T, MASS = T
+INFO  [TRACER_regist] ] Register tracer : No.  6, NAME = QG                      , CV = 2106.0, CP = 2106.0, ENGI0 =  2.439E+05, ADVC = T, MASS = T
+
+INFO  [ATMOS_PHY_CH_driver_tracer_setup] Setup
+
+INFO  [ATMOS_PHY_AE_driver_tracer_setup] Setup
+
+INFO  [ATMOS_PHY_BL_driver_tracer_setup] Setup
+
+INFO  [ATMOS_PHY_LT_driver_tracer_setup] Setup
+INFO  [FILE_setup] Not found namelist. Default used.
+&PARAM_FILE
+ FILE_AGGREGATE=F,
+ /
+
+INFO  [FILE_CARTESC_setup] Setup
+INFO  [FILE_CARTESC_setup] Not found namelist. Default used.
+&PARAM_FILE_CARTESC
+ FILE_CARTESC_DATACHECK_CRITERIA=  1.0000000000000005E-008,
+ /
+
+INFO  [FILE_CARTESC_setup] NetCDF header information 
+      Data source : SCALE-RM ver. 5.5.1
+      Institute   : RIKEN
+
+INFO  [FILE_CARTESC_setup] Data consistency criteria : (file-internal)/internal =    1.0000000000000005E-008
+
+INFO  [COMM_setup] Setup
+INFO  [COMM_setup] Not found namelist. Default used.
+&PARAM_COMM_CARTESC
+ COMM_VSIZE_MAX=25         ,
+ COMM_VSIZE_MAX_PC=62         ,
+ COMM_USE_MPI_PC=T,
+ COMM_USE_MPI_ONESIDED=F,
+ /
+
+INFO  [COMM_setup] Communication information
+      Maximum number of vars for one communication:           25
+      All side is periodic?                       :  T
+
+INFO  [COMM_regist] Register grid: id=           1
+      Data size of var (3D,including halo) [byte] :        19392
+      Data size of halo                    [byte] :         3232
+      Ratio of halo against the whole 3D grid     :   0.166666672    
+
+INFO  [TOPOGRAPHY_setup] Setup
+INFO  [TOPOGRAPHY_setup] Not found namelist. Default used.
+&PARAM_TOPOGRAPHY
+ TOPOGRAPHY_IN_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ TOPOGRAPHY_IN_VARNAME="topo                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ",
+ TOPOGRAPHY_IN_AGGREGATE=F,
+ TOPOGRAPHY_IN_CHECK_COORDINATES=F,
+ TOPOGRAPHY_OUT_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ TOPOGRAPHY_OUT_AGGREGATE=F,
+ TOPOGRAPHY_OUT_DTYPE="DEFAULT                         ",
+ /
+
+INFO  [TOPOGRAPHY_read] Input topography file 
+      topography file is not specified.
+
+INFO  [LANDUSE_setup] Setup
+INFO  [LANDUSE_setup] Not found namelist. Default used.
+&PARAM_LANDUSE
+ LANDUSE_IN_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ LANDUSE_IN_AGGREGATE=F,
+ LANDUSE_IN_CHECK_COORDINATES=T,
+ LANDUSE_OUT_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ LANDUSE_OUT_AGGREGATE=F,
+ LANDUSE_OUT_DTYPE="DEFAULT                         ",
+ LANDUSE_PFT_MOSAIC=2          ,
+ LANDUSE_PFT_NMAX=17         ,
+ LANDUSE_ALLOCEAN=F,
+ LANDUSE_ALLLAND=F,
+ LANDUSE_ALLURBAN=F,
+ LANDUSE_ALLLAKE=F,
+ LANDUSE_IGNORE_LAKE=F,
+ LANDUSE_MOSAICWORLD=F,
+ /
+
+INFO  [LANDUSE_read] Input landuse file 
+      landuse file is not specified.
+      Assume all grids are ocean
+
+INFO  [LANDUSE_calc_fact] calculate landuse factor
+
+INFO  [ATMOS_GRID_CARTESC_REAL_setup] Setup
+INFO  [ATMOS_GRID_CARTESC_REAL_setup] Not found namelist. Default used.
+&PARAM_DOMAIN_CATALOGUE
+ DOMAIN_CATALOGUE_FNAME="latlon_domain_catalogue.txt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ",
+ DOMAIN_CATALOGUE_OUTPUT=F,
+ /
+
+INFO  [MAPPROJECTION_setup] Setup
+INFO  [MAPPROJECTION_setup] Not found namelist. Default used.
+&PARAM_MAPPROJECTION
+ MAPPROJECTION_BASEPOINT_LON=  135.22100000000000     ,
+ MAPPROJECTION_BASEPOINT_LAT=  34.652999999999999     ,
+ MAPPROJECTION_BASEPOINT_X=  250.00000000000000     ,
+ MAPPROJECTION_BASEPOINT_Y=  10000.000000000000     ,
+ MAPPROJECTION_TYPE="NONE                            ",
+ MAPPROJECTION_ROTATION=  0.0000000000000000     ,
+ MAPPROJECTION_LC_LAT1=  30.000000000000000     ,
+ MAPPROJECTION_LC_LAT2=  60.000000000000000     ,
+ MAPPROJECTION_PS_LAT= -9.9998999999999996E+030,
+ MAPPROJECTION_M_LAT= -9.9998999999999996E+030,
+ MAPPROJECTION_EC_LAT= -9.9998999999999996E+030,
+ /
+
+INFO  [MAPPROJECTION_setup] Map projection information
+      Basepoint(x)    [m] :         250.000
+      Basepoint(y)    [m] :       10000.000
+      Map projection type : NONE
+      => NO map projection
+
+INFO  [ATMOS_GRID_CARTESC_REAL_calc_latlon] Base position in the global domain (lat,lon)
+      -> (   135.22100000000000      ,   34.652999999999999      )
+
+INFO  [ATMOS_GRID_CARTESC_REAL_calc_latlon] Position on the earth (Local)
+      NW( 135.22100, 34.65075) - NE( 135.22100, 34.65075)
+                   |                          |
+      SW( 135.22100, 34.56532) - SE( 135.22100, 34.56532)
+
+INFO  [ATMOS_GRID_CARTESC_REAL_calc_Z] Minimum & maximum lowermost CZ
+      -> (   40.000000000000000      ,   40.000000000000000      )
+INFO  [ATMOS_GRID_CARTESC_REAL_calc_Z] Minimum & maximum aspect ratio
+      -> (  0.40964828401778830      ,   6.2500000000000000      )
+
+INFO  [INTERP_VERT_setcoef] Setup
+INFO  [INTERP_VERT_setcoef] No namelists.
+
+INFO  [INTERP_VERT_setcoef] Topography exists & interpolation has meaning? :  F
+
+INFO  [ADMIN_restart_setup] Setup
+&PARAM_RESTART
+ RESTART_OUTPUT=T,
+ RESTART_IN_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ RESTART_IN_AGGREGATE=F,
+ RESTART_IN_POSTFIX_TIMELABEL=F,
+ RESTART_OUT_BASENAME="init                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ",
+ RESTART_OUT_AGGREGATE=F,
+ RESTART_OUT_POSTFIX_TIMELABEL=T,
+ RESTART_OUT_TITLE="                                                                                                                                ",
+ RESTART_OUT_DTYPE="DEFAULT                         ",
+ /
+
+INFO  [ADMIN_TIME_setup] Setup
+&PARAM_TIME
+ TIME_STARTDATE=0          , 2*1          , 3*0          ,
+ TIME_STARTMS=  0.0000000000000000     ,
+ TIME_DURATION= -9.9998999999999996E+030,
+ TIME_DURATION_UNIT="SEC                             ",
+ TIME_DT= -9.9998999999999996E+030,
+ TIME_DT_UNIT="SEC                             ",
+ TIME_DT_ATMOS_DYN= -9.9998999999999996E+030,
+ TIME_DT_ATMOS_DYN_UNIT="SEC                             ",
+ TIME_NSTEP_ATMOS_DYN=-1         ,
+ TIME_DT_ATMOS_PHY_CP= -9.9998999999999996E+030,
+ TIME_DT_ATMOS_PHY_CP_UNIT="                                ",
+ TIME_DT_ATMOS_PHY_MP= -9.9998999999999996E+030,
+ TIME_DT_ATMOS_PHY_MP_UNIT="                                ",
+ TIME_DT_ATMOS_PHY_RD= -9.9998999999999996E+030,
+ TIME_DT_ATMOS_PHY_RD_UNIT="                                ",
+ TIME_DT_ATMOS_PHY_SF= -9.9998999999999996E+030,
+ TIME_DT_ATMOS_PHY_SF_UNIT="                                ",
+ TIME_DT_ATMOS_PHY_TB= -9.9998999999999996E+030,
+ TIME_DT_ATMOS_PHY_TB_UNIT="                                ",
+ TIME_DT_ATMOS_PHY_BL= -9.9998999999999996E+030,
+ TIME_DT_ATMOS_PHY_BL_UNIT="                                ",
+ TIME_DT_ATMOS_PHY_CH= -9.9998999999999996E+030,
+ TIME_DT_ATMOS_PHY_CH_UNIT="                                ",
+ TIME_DT_ATMOS_PHY_AE= -9.9998999999999996E+030,
+ TIME_DT_ATMOS_PHY_AE_UNIT="                                ",
+ TIME_DT_ATMOS_PHY_LT= -9.9998999999999996E+030,
+ TIME_DT_ATMOS_PHY_LT_UNIT="                                ",
+ TIME_DT_ATMOS_RESTART= -9.9998999999999996E+030,
+ TIME_DT_ATMOS_RESTART_UNIT="                                ",
+ TIME_DT_OCEAN= -9.9998999999999996E+030,
+ TIME_DT_OCEAN_UNIT="                                ",
+ TIME_DT_OCEAN_RESTART= -9.9998999999999996E+030,
+ TIME_DT_OCEAN_RESTART_UNIT="                                ",
+ TIME_DT_LAND= -9.9998999999999996E+030,
+ TIME_DT_LAND_UNIT="                                ",
+ TIME_DT_LAND_RESTART= -9.9998999999999996E+030,
+ TIME_DT_LAND_RESTART_UNIT="                                ",
+ TIME_DT_URBAN= -9.9998999999999996E+030,
+ TIME_DT_URBAN_UNIT="                                ",
+ TIME_DT_URBAN_RESTART= -9.9998999999999996E+030,
+ TIME_DT_URBAN_RESTART_UNIT="                                ",
+ TIME_DT_DA= -9.9998999999999996E+030,
+ TIME_DT_DA_UNIT="                                ",
+ TIME_DT_WALLCLOCK_CHECK= -9.9998999999999996E+030,
+ TIME_DT_WALLCLOCK_CHECK_UNIT="                                ",
+ TIME_DT_RESUME= -9.9998999999999996E+030,
+ TIME_DT_RESUME_UNIT="                                ",
+ TIME_WALLCLOCK_LIMIT= -1.0000000000000000     ,
+ TIME_WALLCLOCK_SAFE= 0.90000000000000002     ,
+ DEBUG=F,
+ /
+
+INFO  [ADMIN_TIME_setup] Global date / time setting 
+      START Date     : 0000/01/01 00:00:00 + 0.000
+      END   Date     : 0000/01/01 00:00:00 + 0.000
+
+INFO  [STATISTICS_setup] Setup
+&PARAM_STATISTICS
+ STATISTICS_CHECKTOTAL=T,
+ STATISTICS_USE_GLOBALCOMM=T,
+ /
+
+INFO  [STATISTICS_setup] Caluculate total statistics for monitoring? :  T
+      => The total is calculated for the global domain.
+
+INFO  [COMM_CARTESC_NEST_setup] Setup
+INFO  [COMM_CARTESC_NEST_setup] Not found namelist. Default used.
+&PARAM_COMM_CARTESC_NEST
+ ONLINE_DOMAIN_NUM=1          ,
+ ONLINE_IAM_PARENT=F,
+ ONLINE_IAM_DAUGHTER=F,
+ ONLINE_USE_VELZ=F,
+ ONLINE_NO_ROTATE=F,
+ ONLINE_BOUNDARY_USE_QHYD=F,
+ ONLINE_AGGRESSIVE_COMM=T,
+ ONLINE_WAIT_LIMIT=999999999           ,
+ ONLINE_SPECIFIED_MAXRQ=0          ,
+ COMM_CARTESC_NEST_INTERP_TYPE="LINEAR                          ",
+ COMM_CARTESC_NEST_INTERP_LEVEL=5          ,
+ COMM_CARTESC_NEST_INTERP_WEIGHT_ORDER=2          ,
+ /
+
+INFO  [INTERP_setup] Setup
+INFO  [INTERP_setup] Not found namelist. Default used.
+&PARAM_INTERP
+ INTERP_BUFFER_SIZE_FACT=  2.0000000000000000     ,
+ INTERP_USE_SPLINE_VERT=T,
+ INTERP_THRESHOLD_UNDEF=  1.0000000000000000     ,
+ /
+
+INFO  [CORIOLIS_setup] Setup
+INFO  [CORIOLIS_setup] Not found namelist. Default used.
+&PARAM_CORIOLIS
+ CORIOLIS_TYPE="PLANE                           ",
+ CORIOLIS_F0=  0.0000000000000000     ,
+ CORIOLIS_BETA=  0.0000000000000000     ,
+ CORIOLIS_Y0=  10000.000000000000     ,
+ /
+
+INFO  [ATMOS_HYDROSTATIC_setup] Setup
+INFO  [ATMOS_HYDROSTATIC_setup] Not found namelist. Default used.
+&PARAM_ATMOS_HYDROSTATIC
+ HYDROSTATIC_USELAPSERATE=F,
+ HYDROSTATIC_BUILDRHO_REAL_KREF=1          ,
+ HYDROSTATIC_BAROMETRIC_LAW_MSLP_KREF=1          ,
+ /
+
+INFO  [ATMOS_HYDROSTATIC_setup] Use lapse rate for estimation of surface temperature? :  F
+INFO  [ATMOS_HYDROSTATIC_setup] Buildrho conversion criteria                          :    1.4901161193847656E-008
+
+INFO  [ATMOS_THERMODYN_setup] Setup
+INFO  [ATMOS_THERMODYN_setup] No namelists.
+
+INFO  [ATMOS_SATURATION_setup] Setup
+INFO  [ATMOS_SATURATION_setup] Not found namelist. Default used.
+&PARAM_ATMOS_SATURATION
+ ATMOS_SATURATION_ULIMIT_TEMP=  273.14999999999998     ,
+ ATMOS_SATURATION_LLIMIT_TEMP=  233.15000000000001     ,
+ /
+
+INFO  [ATMOS_SATURATION_setup] Temperature range for liquid/ice mixture :  233.15 -  273.15
+
+INFO  [BULKFLUX_setup] Setup
+INFO  [BULKFLUX_setup] Not found namelist. Default used.
+&PARAM_BULKFLUX
+ BULKFLUX_TYPE="B91W01                          ",
+ BULKFLUX_NK2018=T,
+ BULKFLUX_ITR_SA_MAX=5          ,
+ BULKFLUX_ITR_NR_MAX=10         ,
+ BULKFLUX_WSCF= 0.84852813742385702     ,
+ BULKFLUX_UABS_MIN=  1.0000000000000000E-002,
+ BULKFLUX_WSTAR_MIN=  1.0000000000000000E-004,
+ BULKFLUX_SURFDIAG_NEUTRAL=T,
+ /
+
+INFO  [BULKFLUX_setup] Scheme for surface bulk flux : B91W01
+      => Beljaars and Holtslag (1991) and Wilson (2001)
+
+INFO  [ATMOS_vars_setup] Setup
+INFO  [ATMOS_vars_setup] Not found namelist. Default used.
+&PARAM_ATMOS_VARS
+ ATMOS_RESTART_IN_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ ATMOS_RESTART_IN_AGGREGATE=F,
+ ATMOS_RESTART_IN_POSTFIX_TIMELABEL=F,
+ ATMOS_RESTART_IN_CHECK_COORDINATES=T,
+ ATMOS_RESTART_OUTPUT=T,
+ ATMOS_RESTART_OUT_BASENAME="init                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ",
+ ATMOS_RESTART_OUT_AGGREGATE=F,
+ ATMOS_RESTART_OUT_POSTFIX_TIMELABEL=T,
+ ATMOS_RESTART_OUT_TITLE="ATMOS restart                                                                                                                   ",
+ ATMOS_RESTART_OUT_DTYPE="DEFAULT                         ",
+ ATMOS_RESTART_CHECK=F,
+ ATMOS_RESTART_CHECK_BASENAME="restart_check                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ",
+ ATMOS_RESTART_CHECK_CRITERION=  9.9999999999999995E-007,
+ ATMOS_VARS_CHECKRANGE=F,
+ ATMOS_VARS_CHECKCFL_SOFT=  1.0000000000000000     ,
+ ATMOS_VARS_CHECKCFL_HARD=  2.0000000000000000     ,
+ /
+
+INFO  [ATMOS_vars_setup] List of prognostic variables (ATMOS) 
+            |VARNAME                 |DESCRIPTION                                     [UNIT        ]
+      NO.  1|DENS                    |density                                         [kg/m3       ]
+      NO.  2|MOMZ                    |momentum z                                      [kg/m2/s     ]
+      NO.  3|MOMX                    |momentum x                                      [kg/m2/s     ]
+      NO.  4|MOMY                    |momentum y                                      [kg/m2/s     ]
+      NO.  5|RHOT                    |rho * theta                                     [kg/m3*K     ]
+      NO.  6|QV                      |Ratio of Water Vapor mass to total mass (Specifi[kg/kg       ]
+      NO.  7|QC                      |Ratio of Cloud Water mass to total mass         [kg/kg       ]
+      NO.  8|QR                      |Ratio of Rain Water mass to total mass          [kg/kg       ]
+      NO.  9|QI                      |Ratio of Cloud Ice mass ratio to total mass     [kg/kg       ]
+      NO. 10|QS                      |Ratio of Snow miass ratio to total mass         [kg/kg       ]
+      NO. 11|QG                      |Ratio of Graupel mass ratio to total mass       [kg/kg       ]
+
+INFO  [ATMOS_vars_setup] Restart input?  : NO
+INFO  [ATMOS_vars_setup] Restart output? : YES, file = init
+INFO  [ATMOS_vars_setup] Add timelabel?  :  T
+
+INFO  [ATMOS_vars_setup] Check restart consistency?          :  F
+INFO  [ATMOS_vars_setup] Check value range of variables?     :  F
+INFO  [ATMOS_vars_setup] Threshold of Courant number to warn :    1.0000000000000000     
+INFO  [ATMOS_vars_setup] Threshold of Courant number to stop :    2.0000000000000000     
+
+INFO  [ATMOS_DYN_vars_setup] Setup
+INFO  [ATMOS_DYN_vars_setup] Not found namelist. Default used.
+&PARAM_ATMOS_DYN_VARS
+ ATMOS_DYN_RESTART_IN_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ ATMOS_DYN_RESTART_IN_AGGREGATE=F,
+ ATMOS_DYN_RESTART_IN_POSTFIX_TIMELABEL=F,
+ ATMOS_DYN_RESTART_OUTPUT=T,
+ ATMOS_DYN_RESTART_OUT_BASENAME="init                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ",
+ ATMOS_DYN_RESTART_OUT_AGGREGATE=F,
+ ATMOS_DYN_RESTART_OUT_POSTFIX_TIMELABEL=T,
+ ATMOS_DYN_RESTART_OUT_TITLE="ATMOS_DYN restart                                                                                                               ",
+ ATMOS_DYN_RESTART_OUT_DTYPE="DEFAULT                         ",
+ /
+
+INFO  [ATMOS_DYN_Tstep_short_fvm_hevi_regist] Register additional prognostic variables (HEVI)
+      => nothing.
+
+INFO  [ATMOS_PHY_MP_vars_setup] Setup
+INFO  [ATMOS_PHY_MP_vars_setup] Not found namelist. Default used.
+&PARAM_ATMOS_PHY_MP_VARS
+ ATMOS_PHY_MP_RESTART_IN_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ ATMOS_PHY_MP_RESTART_IN_AGGREGATE=F,
+ ATMOS_PHY_MP_RESTART_IN_POSTFIX_TIMELABEL=F,
+ ATMOS_PHY_MP_RESTART_OUTPUT=T,
+ ATMOS_PHY_MP_RESTART_OUT_BASENAME="init                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ",
+ ATMOS_PHY_MP_RESTART_OUT_AGGREGATE=F,
+ ATMOS_PHY_MP_RESTART_OUT_POSTFIX_TIMELABEL=T,
+ ATMOS_PHY_MP_RESTART_OUT_TITLE="ATMOS_PHY_MP restart                                                                                                            ",
+ ATMOS_PHY_MP_RESTART_OUT_DTYPE="DEFAULT                         ",
+ /
+
+INFO  [ATMOS_PHY_MP_vars_setup] [ATMOS_PHY_MP] prognostic/diagnostic variables
+            |VARNAME                 |DESCRIPTION                                     [UNIT        ]
+
+INFO  [ATMOS_PHY_MP_vars_setup] Restart input?  : NO
+INFO  [ATMOS_PHY_MP_vars_setup] Restart output? : YES, file = init
+INFO  [ATMOS_PHY_MP_vars_setup] Add timelabel?  :  T
+
+INFO  [ATMOS_PHY_AE_vars_setup] Setup
+INFO  [ATMOS_PHY_AE_vars_setup] Not found namelist. Default used.
+&PARAM_ATMOS_PHY_AE_VARS
+ ATMOS_PHY_AE_RESTART_IN_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ ATMOS_PHY_AE_RESTART_IN_AGGREGATE=F,
+ ATMOS_PHY_AE_RESTART_IN_POSTFIX_TIMELABEL=F,
+ ATMOS_PHY_AE_RESTART_OUTPUT=T,
+ ATMOS_PHY_AE_RESTART_OUT_BASENAME="init                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ",
+ ATMOS_PHY_AE_RESTART_OUT_AGGREGATE=F,
+ ATMOS_PHY_AE_RESTART_OUT_POSTFIX_TIMELABEL=T,
+ ATMOS_PHY_AE_RESTART_OUT_TITLE="ATMOS_PHY_AE restart                                                                                                            ",
+ ATMOS_PHY_AE_RESTART_OUT_DTYPE="DEFAULT                         ",
+ /
+
+INFO  [ATMOS_PHY_AE_vars_setup] [ATMOS_PHY_AE] prognostic/diagnostic variables
+            |VARNAME                 |DESCRIPTION                                     [UNIT        ]
+      NO.  1|CCN                     |cloud condensation nuclei                       [num/m3      ]
+
+INFO  [ATMOS_PHY_AE_vars_setup] Restart input?  : NO
+INFO  [ATMOS_PHY_AE_vars_setup] Restart output? : YES, file = init
+INFO  [ATMOS_PHY_AE_vars_setup] Add timelabel?  :  T
+
+INFO  [ATMOS_PHY_CH_vars_setup] Setup
+INFO  [ATMOS_PHY_CH_vars_setup] Not found namelist. Default used.
+&PARAM_ATMOS_PHY_CH_VARS
+ ATMOS_PHY_CH_RESTART_IN_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ ATMOS_PHY_CH_RESTART_IN_AGGREGATE=F,
+ ATMOS_PHY_CH_RESTART_IN_POSTFIX_TIMELABEL=F,
+ ATMOS_PHY_CH_RESTART_OUTPUT=T,
+ ATMOS_PHY_CH_RESTART_OUT_BASENAME="init                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ",
+ ATMOS_PHY_CH_RESTART_OUT_AGGREGATE=F,
+ ATMOS_PHY_CH_RESTART_OUT_POSTFIX_TIMELABEL=T,
+ ATMOS_PHY_CH_RESTART_OUT_TITLE="ATMOS_PHY_CH restart                                                                                                            ",
+ ATMOS_PHY_CH_RESTART_OUT_DTYPE="DEFAULT                         ",
+ /
+
+INFO  [ATMOS_PHY_CH_vars_setup] [ATMOS_PHY_CH] prognostic/diagnostic variables
+            |VARNAME                 |DESCRIPTION                                     [UNIT        ]
+      NO.  1|O3                      |Ozone                                           [PPM         ]
+
+INFO  [ATMOS_PHY_CH_vars_setup] Restart input?  : NO
+INFO  [ATMOS_PHY_CH_vars_setup] Restart output? : YES, file = init
+INFO  [ATMOS_PHY_CH_vars_setup] Add timelabel?  :  T
+
+INFO  [ATMOS_PHY_RD_vars_setup] Setup
+INFO  [ATMOS_PHY_RD_vars_setup] Not found namelist. Default used.
+&PARAM_ATMOS_PHY_RD_VARS
+ ATMOS_PHY_RD_RESTART_IN_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ ATMOS_PHY_RD_RESTART_IN_AGGREGATE=F,
+ ATMOS_PHY_RD_RESTART_IN_POSTFIX_TIMELABEL=F,
+ ATMOS_PHY_RD_RESTART_OUTPUT=T,
+ ATMOS_PHY_RD_RESTART_OUT_BASENAME="init                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ",
+ ATMOS_PHY_RD_RESTART_OUT_AGGREGATE=F,
+ ATMOS_PHY_RD_RESTART_OUT_POSTFIX_TIMELABEL=T,
+ ATMOS_PHY_RD_RESTART_OUT_TITLE="ATMOS_PHY_RD restart                                                                                                            ",
+ ATMOS_PHY_RD_RESTART_OUT_DTYPE="DEFAULT                         ",
+ /
+
+INFO  [ATMOS_PHY_RD_vars_setup] [ATMOS_PHY_RD] prognostic/diagnostic variables
+            |VARNAME                 |DESCRIPTION                                     [UNIT        ]
+      NO.  1|SFLX_LW_up              |surface upward   longwave  flux                 [W/m2        ]
+      NO.  2|SFLX_LW_dn              |surface downward longwave  flux                 [W/m2        ]
+      NO.  3|SFLX_SW_up              |surface upward   shortwave flux                 [W/m2        ]
+      NO.  4|SFLX_SW_dn              |surface downward shortwave flux                 [W/m2        ]
+
+INFO  [ATMOS_PHY_RD_vars_setup] Restart input?  : NO
+INFO  [ATMOS_PHY_RD_vars_setup] Restart output? : YES, file = init
+INFO  [ATMOS_PHY_RD_vars_setup] Add timelabel?  :  T
+
+INFO  [ATMOS_PHY_SF_vars_setup] Setup
+INFO  [ATMOS_PHY_SF_vars_setup] Not found namelist. Default used.
+&PARAM_ATMOS_PHY_SF_VARS
+ ATMOS_PHY_SF_RESTART_IN_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ ATMOS_PHY_SF_RESTART_IN_AGGREGATE=F,
+ ATMOS_PHY_SF_RESTART_IN_POSTFIX_TIMELABEL=F,
+ ATMOS_PHY_SF_RESTART_OUTPUT=T,
+ ATMOS_PHY_SF_RESTART_OUT_BASENAME="init                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ",
+ ATMOS_PHY_SF_RESTART_OUT_AGGREGATE=F,
+ ATMOS_PHY_SF_RESTART_OUT_POSTFIX_TIMELABEL=T,
+ ATMOS_PHY_SF_RESTART_OUT_TITLE="ATMOS_PHY_SF restart                                                                                                            ",
+ ATMOS_PHY_SF_RESTART_OUT_DTYPE="DEFAULT                         ",
+ ATMOS_PHY_SF_DEFAULT_SFC_TEMP=  300.00000000000000     ,
+ ATMOS_PHY_SF_DEFAULT_SFC_ALBEDO_LW=  4.0000000000000001E-002,
+ ATMOS_PHY_SF_DEFAULT_SFC_ALBEDO_SW= 0.10000000000000001     ,
+ ATMOS_PHY_SF_DEFAULT_SFC_Z0M=  1.0000000000000000E-004,
+ ATMOS_PHY_SF_DEFAULT_SFC_Z0H=  1.0000000000000001E-005,
+ ATMOS_PHY_SF_DEFAULT_SFC_Z0E=  1.0000000000000001E-005,
+ /
+
+INFO  [ATMOS_PHY_SF_vars_setup] [ATMOS_PHY_SF] prognostic/diagnostic variables
+            |VARNAME                 |DESCRIPTION                                     [UNIT        ]
+      NO.  1|SFC_TEMP                |surface skin temperature                        [K           ]
+      NO.  2|SFC_ALB_IR_dir          |surface albedo for IR,  direct                  [1           ]
+      NO.  3|SFC_ALB_IR_dif          |surface albedo for IR,  diffuse                 [1           ]
+      NO.  4|SFC_ALB_NIR_dir         |surface albedo for NIR, direct                  [1           ]
+      NO.  5|SFC_ALB_NIR_dif         |surface albedo for NIR, diffuse                 [1           ]
+      NO.  6|SFC_ALB_VIS_dir         |surface albedo for VIS, direct                  [1           ]
+      NO.  7|SFC_ALB_VIS_dif         |surface albedo for VIS, diffuse                 [1           ]
+      NO.  8|SFC_Z0M                 |surface roughness length (momentum)             [m           ]
+      NO.  9|SFC_Z0H                 |surface roughness length (heat)                 [m           ]
+      NO. 10|SFC_Z0E                 |surface roughness length (vapor)                [m           ]
+
+INFO  [ATMOS_PHY_SF_vars_setup] Restart input?  : NO
+INFO  [ATMOS_PHY_SF_vars_setup] Restart output? : YES, file = init
+INFO  [ATMOS_PHY_SF_vars_setup] Add timelabel?  :  T
+
+INFO  [ATMOS_PHY_TB_vars_setup] Setup
+INFO  [ATMOS_PHY_TB_vars_setup] Not found namelist. Default used.
+&PARAM_ATMOS_PHY_TB_VARS
+ ATMOS_PHY_TB_RESTART_IN_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ ATMOS_PHY_TB_RESTART_IN_AGGREGATE=F,
+ ATMOS_PHY_TB_RESTART_IN_POSTFIX_TIMELABEL=F,
+ ATMOS_PHY_TB_RESTART_OUTPUT=T,
+ ATMOS_PHY_TB_RESTART_OUT_BASENAME="init                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ",
+ ATMOS_PHY_TB_RESTART_OUT_AGGREGATE=F,
+ ATMOS_PHY_TB_RESTART_OUT_POSTFIX_TIMELABEL=T,
+ ATMOS_PHY_TB_RESTART_OUT_TITLE="ATMOS_PHY_TB restart                                                                                                            ",
+ ATMOS_PHY_TB_RESTART_OUT_DTYPE="DEFAULT                         ",
+ /
+
+INFO  [ATMOS_PHY_BL_vars_setup] Setup
+INFO  [ATMOS_PHY_BL_vars_setup] Not found namelist. Default used.
+&PARAM_ATMOS_PHY_BL_VARS
+ ATMOS_PHY_BL_RESTART_IN_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ ATMOS_PHY_BL_RESTART_IN_AGGREGATE=F,
+ ATMOS_PHY_BL_RESTART_IN_POSTFIX_TIMELABEL=F,
+ ATMOS_PHY_BL_RESTART_OUTPUT=T,
+ ATMOS_PHY_BL_RESTART_OUT_BASENAME="init                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ",
+ ATMOS_PHY_BL_RESTART_OUT_AGGREGATE=F,
+ ATMOS_PHY_BL_RESTART_OUT_POSTFIX_TIMELABEL=T,
+ ATMOS_PHY_BL_RESTART_OUT_TITLE="ATMOS_PHY_BL restart                                                                                                            ",
+ ATMOS_PHY_BL_RESTART_OUT_DTYPE="DEFAULT                         ",
+ ATMOS_PHY_BL_MIX_TRACERS=T,
+ /
+
+INFO  [ATMOS_PHY_BL_vars_setup] [ATMOS_PHY_BL] prognostic/diagnostic variables
+            |VARNAME                 |DESCRIPTION                                     [UNIT        ]
+      NO.  1|PBL_Zi                  |depth of the boundary layer                     [m           ]
+
+INFO  [ATMOS_PHY_BL_vars_setup] Restart input?  : NO
+INFO  [ATMOS_PHY_BL_vars_setup] Restart output? : YES, file = init
+INFO  [ATMOS_PHY_BL_vars_setup] Add timelabel?  :  T
+
+INFO  [ATMOS_PHY_CP_vars_setup] Setup
+INFO  [ATMOS_PHY_CP_vars_setup] Not found namelist. Default used.
+&PARAM_ATMOS_PHY_CP_VARS
+ ATMOS_PHY_CP_RESTART_IN_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ ATMOS_PHY_CP_RESTART_IN_AGGREGATE=F,
+ ATMOS_PHY_CP_RESTART_IN_POSTFIX_TIMELABEL=F,
+ ATMOS_PHY_CP_RESTART_OUTPUT=T,
+ ATMOS_PHY_CP_RESTART_OUT_BASENAME="init                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ",
+ ATMOS_PHY_CP_RESTART_OUT_AGGREGATE=F,
+ ATMOS_PHY_CP_RESTART_OUT_POSTFIX_TIMELABEL=T,
+ ATMOS_PHY_CP_RESTART_OUT_TITLE="ATMOS_PHY_CP restart                                                                                                            ",
+ ATMOS_PHY_CP_RESTART_OUT_DTYPE="DEFAULT                         ",
+ /
+
+INFO  [ATMOS_PHY_CP_vars_setup] [ATMOS_PHY_CP] prognostic/diagnostic variables
+            |VARNAME                 |DESCRIPTION                                     [UNIT        ]
+      NO.  1|w0mean                  |running mean vertical velocity                  [m/s         ]
+      NO.  2|kf_nca                  |advection/cumulus convection timescale for KF   [sec         ]
+      NO.  3|SFLX_RAIN_CP            |surface rain flux in CP                         [kg/m2/s     ]
+      NO.  4|SFLX_SNOW_CP            |surface snow flux in CP                         [kg/m2/s     ]
+      NO.  5|SFLX_ENGI_CP            |surface internal energy flux in CP              [J/m2/s      ]
+      NO.  6|DENS_t_CP               |tendency DENS in CP                             [kg/m3/s     ]
+      NO.  7|RHOT_t_CP               |tendency RHOT in CP                             [K*kg/m3/s   ]
+      NO.  8|QV_t_CP                 |tendency rho*QV in CP                           [kg/m3/s     ]
+      NO.  9|QC_t_CP                 |tendency rho*QC in CP                           [kg/m3/s     ]
+      NO. 10|QR_t_CP                 |tendency rho*QR in CP                           [kg/m3/s     ]
+      NO. 11|QI_t_CP                 |tendency rho*QI in CP                           [kg/m3/s     ]
+      NO. 12|QS_t_CP                 |tendency rho*QS in CP                           [kg/m3/s     ]
+      NO. 13|QG_t_CP                 |tendency rho*QG in CP                           [kg/m3/s     ]
+      NO. 14|QH_t_CP                 |tendency rho*QH in CP                           [kg/m3/s     ]
+
+INFO  [ATMOS_PHY_CP_vars_setup] Restart input?  : NO
+INFO  [ATMOS_PHY_CP_vars_setup] Restart output? : YES, file = init
+INFO  [ATMOS_PHY_CP_vars_setup] Add timelabel?  :  T
+
+INFO  [ATMOS_PHY_LT_vars_setup] Setup
+INFO  [ATMOS_PHY_LT_vars_setup] Not found namelist. Default used.
+&PARAM_ATMOS_PHY_LT_VARS
+ ATMOS_PHY_LT_RESTART_IN_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ ATMOS_PHY_LT_RESTART_IN_AGGREGATE=F,
+ ATMOS_PHY_LT_RESTART_IN_POSTFIX_TIMELABEL=F,
+ ATMOS_PHY_LT_RESTART_OUTPUT=T,
+ ATMOS_PHY_LT_RESTART_OUT_BASENAME="init                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ",
+ ATMOS_PHY_LT_RESTART_OUT_AGGREGATE=F,
+ ATMOS_PHY_LT_RESTART_OUT_POSTFIX_TIMELABEL=T,
+ ATMOS_PHY_LT_RESTART_OUT_TITLE="ATMOS_PHY_LT restart                                                                                                            ",
+ ATMOS_PHY_LT_RESTART_OUT_DTYPE="DEFAULT                         ",
+ /
+
+INFO  [ATMOS_PHY_LT_vars_setup] [ATMOS_PHY_TL] prognostic/diagnostic variables
+            |VARNAME                 |DESCRIPTION                                     [UNIT        ]
+      NO.  1|Epot                    |Electric potential                              [V           ]
+
+INFO  [ATMOS_PHY_LT_vars_setup] Restart input?  : NO
+INFO  [ATMOS_PHY_LT_vars_setup] Restart output? : YES, file = init
+INFO  [ATMOS_PHY_LT_vars_setup] Add timelabel?  :  T
+
+INFO  [ATMOS_driver_setup] Setup
+
+INFO  [ATMOS_driver_setup] Setup each atmospheric components ...
+
+INFO  [ATMOS_SOLARINS_setup] Setup
+INFO  [ATMOS_SOLARINS_setup] Not found namelist. Default used.
+&PARAM_ATMOS_SOLARINS
+ ATMOS_SOLARINS_CONSTANT=  1360.2501170000000     ,
+ ATMOS_SOLARINS_SET_VE=F,
+ ATMOS_SOLARINS_SET_IDEAL=F,
+ ATMOS_SOLARINS_OBLIQUITY=  23.440000000000001     ,
+ ATMOS_SOLARINS_ECCENTRICITY=  1.6700000000000000E-002,
+ ATMOS_SOLARINS_FIXEDLATLON=F,
+ ATMOS_SOLARINS_LON=  2.3600516678392522     ,
+ ATMOS_SOLARINS_LAT= 0.60480894569359500     ,
+ ATMOS_SOLARINS_FIXEDDATE=F,
+ ATMOS_SOLARINS_DATE= 6*-1         ,
+ ATMOS_SOLARINS_PERIHELION_LON=  282.94718999999998     ,
+ ATMOS_SOLARINS_VE_DATE=2000       ,3          ,20         ,7          ,35         ,
+ 0          ,
+ ATMOS_SOLARINS_ANNUAL_SEC= -9.9998999999999996E+030,
+ ATMOS_SOLARINS_DIURNAL_SEC= -9.9998999999999996E+030,
+ DEBUG=F,
+ /
+
+INFO  [ATMOS_SOLARINS_setup] Solar insolation parameters 
+INFO  [ATMOS_SOLARINS_setup] Reference year                        :    1950
+INFO  [ATMOS_SOLARINS_setup] Current   year                        :       0
+INFO  [ATMOS_SOLARINS_setup] Difference from ref.                  :   -1950
+
+INFO  [ATMOS_SOLARINS_setup] Solar constant                 [W/m2] : 1360.2501170
+INFO  [ATMOS_SOLARINS_setup] Obliquity                       [deg] :   23.6953730
+INFO  [ATMOS_SOLARINS_setup] Eccentricity                          :    0.0174657
+INFO  [ATMOS_SOLARINS_setup] Longitude of perihelion         [deg] :  248.8196686
+
+INFO  [ATMOS_SOLARINS_setup] Solar annual cycle is synced with calendar
+INFO  [ATMOS_SOLARINS_setup] Solar annual cycle              [sec] :  31556952.0000
+INFO  [ATMOS_SOLARINS_setup] Solar annual cycle              [day] :       365.2425
+INFO  [ATMOS_SOLARINS_setup] Solar diurnal cycle is synced with calendar
+INFO  [ATMOS_SOLARINS_setup] Solar diurnal cycle             [sec] :     86400.0000
+
+INFO  [ATMOS_SOLARINS_setup] Latitude/Longitude is fixed?          :  F
+INFO  [ATMOS_SOLARINS_setup] Date is fixed?                        :  F
+
+INFO  [ATMOS_SOLARINS_setup] Orbit info for next 1 solar year
+DATE                         SOLAR_CONST, Scaled dist from star, Longitude
+0000/01/01 00:00:00 + 0.000    1401.6200               0.985132   282.0170
+0000/01/02 00:00:00 + 0.000    1401.1716               0.985289   283.0320
+0000/01/03 00:00:00 + 0.000    1400.7113               0.985451   284.0466
+0000/01/04 00:00:00 + 0.000    1400.2393               0.985617   285.0609
+0000/01/05 00:00:00 + 0.000    1399.7557               0.985787   286.0748
+0000/01/06 00:00:00 + 0.000    1399.2607               0.985962   287.0883
+0000/01/07 00:00:00 + 0.000    1398.7544               0.986140   288.1014
+0000/01/08 00:00:00 + 0.000    1398.2370               0.986323   289.1142
+0000/01/09 00:00:00 + 0.000    1397.7087               0.986509   290.1265
+0000/01/10 00:00:00 + 0.000    1397.1697               0.986699   291.1384
+0000/01/11 00:00:00 + 0.000    1396.6200               0.986893   292.1500
+0000/01/12 00:00:00 + 0.000    1396.0598               0.987091   293.1611
+0000/01/13 00:00:00 + 0.000    1395.4894               0.987293   294.1717
+0000/01/14 00:00:00 + 0.000    1394.9090               0.987499   295.1820
+0000/01/15 00:00:00 + 0.000    1394.3186               0.987708   296.1918
+0000/01/16 00:00:00 + 0.000    1393.7185               0.987920   297.2011
+0000/01/17 00:00:00 + 0.000    1393.1089               0.988136   298.2100
+0000/01/18 00:00:00 + 0.000    1392.4899               0.988356   299.2184
+0000/01/19 00:00:00 + 0.000    1391.8618               0.988579   300.2263
+0000/01/20 00:00:00 + 0.000    1391.2248               0.988805   301.2338
+0000/01/21 00:00:00 + 0.000    1390.5789               0.989035   302.2408
+0000/01/22 00:00:00 + 0.000    1389.9245               0.989268   303.2473
+0000/01/23 00:00:00 + 0.000    1389.2618               0.989504   304.2532
+0000/01/24 00:00:00 + 0.000    1388.5908               0.989743   305.2587
+0000/01/25 00:00:00 + 0.000    1387.9120               0.989985   306.2637
+0000/01/26 00:00:00 + 0.000    1387.2254               0.990230   307.2682
+0000/01/27 00:00:00 + 0.000    1386.5312               0.990477   308.2721
+0000/01/28 00:00:00 + 0.000    1385.8298               0.990728   309.2755
+0000/01/29 00:00:00 + 0.000    1385.1212               0.990981   310.2784
+0000/01/30 00:00:00 + 0.000    1384.4057               0.991237   311.2808
+0000/01/31 00:00:00 + 0.000    1383.6836               0.991496   312.2826
+0000/02/01 00:00:00 + 0.000    1382.9549               0.991757   313.2839
+0000/02/02 00:00:00 + 0.000    1382.2201               0.992021   314.2846
+0000/02/03 00:00:00 + 0.000    1381.4792               0.992287   315.2848
+0000/02/04 00:00:00 + 0.000    1380.7326               0.992555   316.2844
+0000/02/05 00:00:00 + 0.000    1379.9804               0.992826   317.2835
+0000/02/06 00:00:00 + 0.000    1379.2228               0.993098   318.2820
+0000/02/07 00:00:00 + 0.000    1378.4601               0.993373   319.2799
+0000/02/08 00:00:00 + 0.000    1377.6926               0.993650   320.2773
+0000/02/09 00:00:00 + 0.000    1376.9204               0.993928   321.2741
+0000/02/10 00:00:00 + 0.000    1376.1437               0.994209   322.2703
+0000/02/11 00:00:00 + 0.000    1375.3629               0.994491   323.2659
+0000/02/12 00:00:00 + 0.000    1374.5781               0.994775   324.2610
+0000/02/13 00:00:00 + 0.000    1373.7896               0.995060   325.2555
+0000/02/14 00:00:00 + 0.000    1372.9976               0.995347   326.2494
+0000/02/15 00:00:00 + 0.000    1372.2023               0.995635   327.2427
+0000/02/16 00:00:00 + 0.000    1371.4040               0.995925   328.2354
+0000/02/17 00:00:00 + 0.000    1370.6029               0.996216   329.2276
+0000/02/18 00:00:00 + 0.000    1369.7993               0.996508   330.2191
+0000/02/19 00:00:00 + 0.000    1368.9934               0.996802   331.2101
+0000/02/20 00:00:00 + 0.000    1368.1854               0.997096   332.2004
+0000/02/21 00:00:00 + 0.000    1367.3755               0.997391   333.1902
+0000/02/22 00:00:00 + 0.000    1366.5641               0.997687   334.1794
+0000/02/23 00:00:00 + 0.000    1365.7513               0.997984   335.1680
+0000/02/24 00:00:00 + 0.000    1364.9374               0.998281   336.1560
+0000/02/25 00:00:00 + 0.000    1364.1226               0.998580   337.1434
+0000/02/26 00:00:00 + 0.000    1363.3071               0.998878   338.1302
+0000/02/27 00:00:00 + 0.000    1362.4913               0.999177   339.1164
+0000/02/28 00:00:00 + 0.000    1361.6753               0.999477   340.1020
+0000/02/29 00:00:00 + 0.000    1360.8593               0.999776   341.0871
+0000/03/01 00:00:00 + 0.000    1360.0437               1.000076   342.0715
+0000/03/02 00:00:00 + 0.000    1359.2286               1.000376   343.0554
+0000/03/03 00:00:00 + 0.000    1358.4143               1.000675   344.0386
+0000/03/04 00:00:00 + 0.000    1357.6010               1.000975   345.0213
+0000/03/05 00:00:00 + 0.000    1356.7890               1.001275   346.0034
+0000/03/06 00:00:00 + 0.000    1355.9785               1.001574   346.9849
+0000/03/07 00:00:00 + 0.000    1355.1697               1.001873   347.9658
+0000/03/08 00:00:00 + 0.000    1354.3629               1.002171   348.9461
+0000/03/09 00:00:00 + 0.000    1353.5582               1.002469   349.9259
+0000/03/10 00:00:00 + 0.000    1352.7560               1.002766   350.9051
+0000/03/11 00:00:00 + 0.000    1351.9565               1.003063   351.8837
+0000/03/12 00:00:00 + 0.000    1351.1598               1.003358   352.8617
+0000/03/13 00:00:00 + 0.000    1350.3663               1.003653   353.8392
+0000/03/14 00:00:00 + 0.000    1349.5761               1.003947   354.8161
+0000/03/15 00:00:00 + 0.000    1348.7895               1.004239   355.7925
+0000/03/16 00:00:00 + 0.000    1348.0068               1.004531   356.7683
+0000/03/17 00:00:00 + 0.000    1347.2280               1.004821   357.7435
+0000/03/18 00:00:00 + 0.000    1346.4535               1.005110   358.7182
+0000/03/19 00:00:00 + 0.000    1345.6835               1.005398   359.6923
+0000/03/20 00:00:00 + 0.000    1344.9182               1.005684     0.6659
+0000/03/21 00:00:00 + 0.000    1344.1579               1.005968     1.6390
+0000/03/22 00:00:00 + 0.000    1343.4026               1.006251     2.6115
+0000/03/23 00:00:00 + 0.000    1342.6528               1.006532     3.5835
+0000/03/24 00:00:00 + 0.000    1341.9085               1.006811     4.5549
+0000/03/25 00:00:00 + 0.000    1341.1700               1.007088     5.5259
+0000/03/26 00:00:00 + 0.000    1340.4375               1.007363     6.4963
+0000/03/27 00:00:00 + 0.000    1339.7113               1.007636     7.4662
+0000/03/28 00:00:00 + 0.000    1338.9914               1.007907     8.4356
+0000/03/29 00:00:00 + 0.000    1338.2782               1.008176     9.4045
+0000/03/30 00:00:00 + 0.000    1337.5718               1.008442    10.3729
+0000/03/31 00:00:00 + 0.000    1336.8725               1.008705    11.3408
+0000/04/01 00:00:00 + 0.000    1336.1804               1.008967    12.3082
+0000/04/02 00:00:00 + 0.000    1335.4958               1.009225    13.2752
+0000/04/03 00:00:00 + 0.000    1334.8188               1.009481    14.2416
+0000/04/04 00:00:00 + 0.000    1334.1496               1.009734    15.2076
+0000/04/05 00:00:00 + 0.000    1333.4885               1.009985    16.1732
+0000/04/06 00:00:00 + 0.000    1332.8356               1.010232    17.1382
+0000/04/07 00:00:00 + 0.000    1332.1911               1.010476    18.1029
+0000/04/08 00:00:00 + 0.000    1331.5552               1.010718    19.0671
+0000/04/09 00:00:00 + 0.000    1330.9280               1.010956    20.0308
+0000/04/10 00:00:00 + 0.000    1330.3099               1.011190    20.9941
+0000/04/11 00:00:00 + 0.000    1329.7008               1.011422    21.9570
+0000/04/12 00:00:00 + 0.000    1329.1011               1.011650    22.9195
+0000/04/13 00:00:00 + 0.000    1328.5109               1.011875    23.8816
+0000/04/14 00:00:00 + 0.000    1327.9303               1.012096    24.8433
+0000/04/15 00:00:00 + 0.000    1327.3595               1.012314    25.8045
+0000/04/16 00:00:00 + 0.000    1326.7987               1.012528    26.7654
+0000/04/17 00:00:00 + 0.000    1326.2481               1.012738    27.7259
+0000/04/18 00:00:00 + 0.000    1325.7078               1.012944    28.6860
+0000/04/19 00:00:00 + 0.000    1325.1780               1.013147    29.6458
+0000/04/20 00:00:00 + 0.000    1324.6587               1.013345    30.6052
+0000/04/21 00:00:00 + 0.000    1324.1503               1.013540    31.5642
+0000/04/22 00:00:00 + 0.000    1323.6528               1.013730    32.5229
+0000/04/23 00:00:00 + 0.000    1323.1663               1.013916    33.4813
+0000/04/24 00:00:00 + 0.000    1322.6910               1.014099    34.4393
+0000/04/25 00:00:00 + 0.000    1322.2271               1.014276    35.3970
+0000/04/26 00:00:00 + 0.000    1321.7747               1.014450    36.3544
+0000/04/27 00:00:00 + 0.000    1321.3338               1.014619    37.3115
+0000/04/28 00:00:00 + 0.000    1320.9047               1.014784    38.2683
+0000/04/29 00:00:00 + 0.000    1320.4875               1.014944    39.2249
+0000/04/30 00:00:00 + 0.000    1320.0823               1.015100    40.1811
+0000/05/01 00:00:00 + 0.000    1319.6891               1.015251    41.1371
+0000/05/02 00:00:00 + 0.000    1319.3082               1.015398    42.0928
+0000/05/03 00:00:00 + 0.000    1318.9396               1.015540    43.0482
+0000/05/04 00:00:00 + 0.000    1318.5834               1.015677    44.0034
+0000/05/05 00:00:00 + 0.000    1318.2397               1.015809    44.9584
+0000/05/06 00:00:00 + 0.000    1317.9087               1.015937    45.9131
+0000/05/07 00:00:00 + 0.000    1317.5905               1.016060    46.8676
+0000/05/08 00:00:00 + 0.000    1317.2850               1.016177    47.8219
+0000/05/09 00:00:00 + 0.000    1316.9925               1.016290    48.7760
+0000/05/10 00:00:00 + 0.000    1316.7130               1.016398    49.7299
+0000/05/11 00:00:00 + 0.000    1316.4466               1.016501    50.6837
+0000/05/12 00:00:00 + 0.000    1316.1933               1.016599    51.6372
+0000/05/13 00:00:00 + 0.000    1315.9533               1.016691    52.5906
+0000/05/14 00:00:00 + 0.000    1315.7265               1.016779    53.5438
+0000/05/15 00:00:00 + 0.000    1315.5132               1.016861    54.4969
+0000/05/16 00:00:00 + 0.000    1315.3132               1.016939    55.4498
+0000/05/17 00:00:00 + 0.000    1315.1268               1.017011    56.4026
+0000/05/18 00:00:00 + 0.000    1314.9539               1.017078    57.3553
+0000/05/19 00:00:00 + 0.000    1314.7946               1.017139    58.3079
+0000/05/20 00:00:00 + 0.000    1314.6490               1.017196    59.2604
+0000/05/21 00:00:00 + 0.000    1314.5170               1.017247    60.2127
+0000/05/22 00:00:00 + 0.000    1314.3988               1.017292    61.1650
+0000/05/23 00:00:00 + 0.000    1314.2944               1.017333    62.1172
+0000/05/24 00:00:00 + 0.000    1314.2037               1.017368    63.0694
+0000/05/25 00:00:00 + 0.000    1314.1268               1.017398    64.0215
+0000/05/26 00:00:00 + 0.000    1314.0638               1.017422    64.9735
+0000/05/27 00:00:00 + 0.000    1314.0147               1.017441    65.9256
+0000/05/28 00:00:00 + 0.000    1313.9794               1.017455    66.8775
+0000/05/29 00:00:00 + 0.000    1313.9580               1.017463    67.8295
+0000/05/30 00:00:00 + 0.000    1313.9505               1.017466    68.7815
+0000/05/31 00:00:00 + 0.000    1313.9569               1.017463    69.7334
+0000/06/01 00:00:00 + 0.000    1313.9772               1.017456    70.6854
+0000/06/02 00:00:00 + 0.000    1314.0113               1.017442    71.6374
+0000/06/03 00:00:00 + 0.000    1314.0594               1.017424    72.5894
+0000/06/04 00:00:00 + 0.000    1314.1213               1.017400    73.5414
+0000/06/05 00:00:00 + 0.000    1314.1970               1.017371    74.4935
+0000/06/06 00:00:00 + 0.000    1314.2866               1.017336    75.4456
+0000/06/07 00:00:00 + 0.000    1314.3899               1.017296    76.3979
+0000/06/08 00:00:00 + 0.000    1314.5070               1.017251    77.3501
+0000/06/09 00:00:00 + 0.000    1314.6379               1.017200    78.3025
+0000/06/10 00:00:00 + 0.000    1314.7824               1.017144    79.2550
+0000/06/11 00:00:00 + 0.000    1314.9406               1.017083    80.2075
+0000/06/12 00:00:00 + 0.000    1315.1124               1.017016    81.1602
+0000/06/13 00:00:00 + 0.000    1315.2978               1.016945    82.1130
+0000/06/14 00:00:00 + 0.000    1315.4966               1.016868    83.0659
+0000/06/15 00:00:00 + 0.000    1315.7089               1.016786    84.0190
+0000/06/16 00:00:00 + 0.000    1315.9346               1.016699    84.9722
+0000/06/17 00:00:00 + 0.000    1316.1735               1.016606    85.9256
+0000/06/18 00:00:00 + 0.000    1316.4257               1.016509    86.8791
+0000/06/19 00:00:00 + 0.000    1316.6911               1.016406    87.8328
+0000/06/20 00:00:00 + 0.000    1316.9696               1.016299    88.7867
+0000/06/21 00:00:00 + 0.000    1317.2611               1.016187    89.7408
+0000/06/22 00:00:00 + 0.000    1317.5655               1.016069    90.6951
+0000/06/23 00:00:00 + 0.000    1317.8827               1.015947    91.6496
+0000/06/24 00:00:00 + 0.000    1318.2127               1.015820    92.6043
+0000/06/25 00:00:00 + 0.000    1318.5553               1.015688    93.5593
+0000/06/26 00:00:00 + 0.000    1318.9105               1.015551    94.5144
+0000/06/27 00:00:00 + 0.000    1319.2781               1.015409    95.4699
+0000/06/28 00:00:00 + 0.000    1319.6581               1.015263    96.4255
+0000/06/29 00:00:00 + 0.000    1320.0502               1.015112    97.3815
+0000/06/30 00:00:00 + 0.000    1320.4545               1.014957    98.3377
+0000/07/01 00:00:00 + 0.000    1320.8708               1.014797    99.2942
+0000/07/02 00:00:00 + 0.000    1321.2990               1.014633   100.2510
+0000/07/03 00:00:00 + 0.000    1321.7389               1.014464   101.2080
+0000/07/04 00:00:00 + 0.000    1322.1904               1.014291   102.1654
+0000/07/05 00:00:00 + 0.000    1322.6534               1.014113   103.1231
+0000/07/06 00:00:00 + 0.000    1323.1277               1.013931   104.0811
+0000/07/07 00:00:00 + 0.000    1323.6133               1.013745   105.0395
+0000/07/08 00:00:00 + 0.000    1324.1100               1.013555   105.9981
+0000/07/09 00:00:00 + 0.000    1324.6175               1.013361   106.9572
+0000/07/10 00:00:00 + 0.000    1325.1359               1.013163   107.9165
+0000/07/11 00:00:00 + 0.000    1325.6649               1.012960   108.8763
+0000/07/12 00:00:00 + 0.000    1326.2044               1.012754   109.8363
+0000/07/13 00:00:00 + 0.000    1326.7542               1.012545   110.7968
+0000/07/14 00:00:00 + 0.000    1327.3141               1.012331   111.7577
+0000/07/15 00:00:00 + 0.000    1327.8841               1.012114   112.7189
+0000/07/16 00:00:00 + 0.000    1328.4639               1.011893   113.6805
+0000/07/17 00:00:00 + 0.000    1329.0534               1.011668   114.6426
+0000/07/18 00:00:00 + 0.000    1329.6523               1.011440   115.6050
+0000/07/19 00:00:00 + 0.000    1330.2606               1.011209   116.5679
+0000/07/20 00:00:00 + 0.000    1330.8781               1.010975   117.5312
+0000/07/21 00:00:00 + 0.000    1331.5045               1.010737   118.4949
+0000/07/22 00:00:00 + 0.000    1332.1397               1.010496   119.4590
+0000/07/23 00:00:00 + 0.000    1332.7835               1.010252   120.4236
+0000/07/24 00:00:00 + 0.000    1333.4358               1.010005   121.3887
+0000/07/25 00:00:00 + 0.000    1334.0963               1.009755   122.3542
+0000/07/26 00:00:00 + 0.000    1334.7648               1.009502   123.3201
+0000/07/27 00:00:00 + 0.000    1335.4412               1.009246   124.2866
+0000/07/28 00:00:00 + 0.000    1336.1252               1.008988   125.2535
+0000/07/29 00:00:00 + 0.000    1336.8167               1.008727   126.2209
+0000/07/30 00:00:00 + 0.000    1337.5154               1.008463   127.1887
+0000/07/31 00:00:00 + 0.000    1338.2212               1.008197   128.1571
+0000/08/01 00:00:00 + 0.000    1338.9339               1.007929   129.1260
+0000/08/02 00:00:00 + 0.000    1339.6532               1.007658   130.0953
+0000/08/03 00:00:00 + 0.000    1340.3790               1.007385   131.0652
+0000/08/04 00:00:00 + 0.000    1341.1110               1.007110   132.0356
+0000/08/05 00:00:00 + 0.000    1341.8490               1.006833   133.0065
+0000/08/06 00:00:00 + 0.000    1342.5928               1.006554   133.9779
+0000/08/07 00:00:00 + 0.000    1343.3422               1.006274   134.9498
+0000/08/08 00:00:00 + 0.000    1344.0970               1.005991   135.9223
+0000/08/09 00:00:00 + 0.000    1344.8570               1.005707   136.8953
+0000/08/10 00:00:00 + 0.000    1345.6219               1.005421   137.8688
+0000/08/11 00:00:00 + 0.000    1346.3915               1.005133   138.8429
+0000/08/12 00:00:00 + 0.000    1347.1657               1.004845   139.8176
+0000/08/13 00:00:00 + 0.000    1347.9441               1.004554   140.7928
+0000/08/14 00:00:00 + 0.000    1348.7266               1.004263   141.7685
+0000/08/15 00:00:00 + 0.000    1349.5128               1.003970   142.7448
+0000/08/16 00:00:00 + 0.000    1350.3027               1.003677   143.7217
+0000/08/17 00:00:00 + 0.000    1351.0960               1.003382   144.6991
+0000/08/18 00:00:00 + 0.000    1351.8924               1.003086   145.6771
+0000/08/19 00:00:00 + 0.000    1352.6917               1.002790   146.6557
+0000/08/20 00:00:00 + 0.000    1353.4937               1.002493   147.6348
+0000/08/21 00:00:00 + 0.000    1354.2982               1.002195   148.6145
+0000/08/22 00:00:00 + 0.000    1355.1048               1.001897   149.5948
+0000/08/23 00:00:00 + 0.000    1355.9135               1.001598   150.5757
+0000/08/24 00:00:00 + 0.000    1356.7239               1.001299   151.5571
+0000/08/25 00:00:00 + 0.000    1357.5358               1.000999   152.5392
+0000/08/26 00:00:00 + 0.000    1358.3490               1.000700   153.5218
+0000/08/27 00:00:00 + 0.000    1359.1632               1.000400   154.5050
+0000/08/28 00:00:00 + 0.000    1359.9782               1.000100   155.4888
+0000/08/29 00:00:00 + 0.000    1360.7938               0.999800   156.4732
+0000/08/30 00:00:00 + 0.000    1361.6098               0.999501   157.4582
+0000/08/31 00:00:00 + 0.000    1362.4258               0.999201   158.4438
+0000/09/01 00:00:00 + 0.000    1363.2416               0.998902   159.4299
+0000/09/02 00:00:00 + 0.000    1364.0571               0.998604   160.4167
+0000/09/03 00:00:00 + 0.000    1364.8720               0.998305   161.4041
+0000/09/04 00:00:00 + 0.000    1365.6860               0.998008   162.3920
+0000/09/05 00:00:00 + 0.000    1366.4989               0.997711   163.3805
+0000/09/06 00:00:00 + 0.000    1367.3104               0.997415   164.3697
+0000/09/07 00:00:00 + 0.000    1368.1204               0.997120   165.3594
+0000/09/08 00:00:00 + 0.000    1368.9286               0.996825   166.3497
+0000/09/09 00:00:00 + 0.000    1369.7347               0.996532   167.3406
+0000/09/10 00:00:00 + 0.000    1370.5385               0.996240   168.3321
+0000/09/11 00:00:00 + 0.000    1371.3398               0.995948   169.3242
+0000/09/12 00:00:00 + 0.000    1372.1383               0.995659   170.3169
+0000/09/13 00:00:00 + 0.000    1372.9338               0.995370   171.3102
+0000/09/14 00:00:00 + 0.000    1373.7261               0.995083   172.3040
+0000/09/15 00:00:00 + 0.000    1374.5149               0.994797   173.2985
+0000/09/16 00:00:00 + 0.000    1375.3000               0.994513   174.2935
+0000/09/17 00:00:00 + 0.000    1376.0812               0.994231   175.2891
+0000/09/18 00:00:00 + 0.000    1376.8582               0.993951   176.2853
+0000/09/19 00:00:00 + 0.000    1377.6307               0.993672   177.2820
+0000/09/20 00:00:00 + 0.000    1378.3987               0.993395   178.2793
+0000/09/21 00:00:00 + 0.000    1379.1618               0.993120   179.2772
+0000/09/22 00:00:00 + 0.000    1379.9197               0.992847   180.2757
+0000/09/23 00:00:00 + 0.000    1380.6724               0.992577   181.2747
+0000/09/24 00:00:00 + 0.000    1381.4195               0.992308   182.2743
+0000/09/25 00:00:00 + 0.000    1382.1608               0.992042   183.2744
+0000/09/26 00:00:00 + 0.000    1382.8962               0.991778   184.2751
+0000/09/27 00:00:00 + 0.000    1383.6253               0.991517   185.2763
+0000/09/28 00:00:00 + 0.000    1384.3480               0.991258   186.2781
+0000/09/29 00:00:00 + 0.000    1385.0640               0.991002   187.2804
+0000/09/30 00:00:00 + 0.000    1385.7731               0.990748   188.2833
+0000/10/01 00:00:00 + 0.000    1386.4752               0.990497   189.2866
+0000/10/02 00:00:00 + 0.000    1387.1699               0.990249   190.2906
+0000/10/03 00:00:00 + 0.000    1387.8571               0.990004   191.2950
+0000/10/04 00:00:00 + 0.000    1388.5366               0.989762   192.2999
+0000/10/05 00:00:00 + 0.000    1389.2082               0.989523   193.3054
+0000/10/06 00:00:00 + 0.000    1389.8716               0.989286   194.3113
+0000/10/07 00:00:00 + 0.000    1390.5267               0.989053   195.3177
+0000/10/08 00:00:00 + 0.000    1391.1732               0.988824   196.3247
+0000/10/09 00:00:00 + 0.000    1391.8110               0.988597   197.3321
+0000/10/10 00:00:00 + 0.000    1392.4398               0.988374   198.3400
+0000/10/11 00:00:00 + 0.000    1393.0596               0.988154   199.3484
+0000/10/12 00:00:00 + 0.000    1393.6699               0.987937   200.3572
+0000/10/13 00:00:00 + 0.000    1394.2708               0.987724   201.3665
+0000/10/14 00:00:00 + 0.000    1394.8619               0.987515   202.3763
+0000/10/15 00:00:00 + 0.000    1395.4432               0.987309   203.3865
+0000/10/16 00:00:00 + 0.000    1396.0144               0.987107   204.3971
+0000/10/17 00:00:00 + 0.000    1396.5754               0.986909   205.4082
+0000/10/18 00:00:00 + 0.000    1397.1259               0.986715   206.4197
+0000/10/19 00:00:00 + 0.000    1397.6659               0.986524   207.4316
+0000/10/20 00:00:00 + 0.000    1398.1950               0.986337   208.4439
+0000/10/21 00:00:00 + 0.000    1398.7133               0.986155   209.4566
+0000/10/22 00:00:00 + 0.000    1399.2204               0.985976   210.4697
+0000/10/23 00:00:00 + 0.000    1399.7164               0.985801   211.4832
+0000/10/24 00:00:00 + 0.000    1400.2009               0.985631   212.4971
+0000/10/25 00:00:00 + 0.000    1400.6738               0.985464   213.5113
+0000/10/26 00:00:00 + 0.000    1401.1350               0.985302   214.5259
+0000/10/27 00:00:00 + 0.000    1401.5844               0.985144   215.5408
+0000/10/28 00:00:00 + 0.000    1402.0218               0.984990   216.5561
+0000/10/29 00:00:00 + 0.000    1402.4470               0.984841   217.5717
+0000/10/30 00:00:00 + 0.000    1402.8600               0.984696   218.5876
+0000/10/31 00:00:00 + 0.000    1403.2606               0.984556   219.6038
+0000/11/01 00:00:00 + 0.000    1403.6487               0.984419   220.6204
+0000/11/02 00:00:00 + 0.000    1404.0240               0.984288   221.6372
+0000/11/03 00:00:00 + 0.000    1404.3867               0.984161   222.6543
+0000/11/04 00:00:00 + 0.000    1404.7364               0.984038   223.6717
+0000/11/05 00:00:00 + 0.000    1405.0731               0.983920   224.6894
+0000/11/06 00:00:00 + 0.000    1405.3968               0.983807   225.7073
+0000/11/07 00:00:00 + 0.000    1405.7072               0.983698   226.7254
+0000/11/08 00:00:00 + 0.000    1406.0043               0.983594   227.7438
+0000/11/09 00:00:00 + 0.000    1406.2880               0.983495   228.7624
+0000/11/10 00:00:00 + 0.000    1406.5582               0.983401   229.7813
+0000/11/11 00:00:00 + 0.000    1406.8148               0.983311   230.8003
+0000/11/12 00:00:00 + 0.000    1407.0578               0.983226   231.8195
+0000/11/13 00:00:00 + 0.000    1407.2870               0.983146   232.8389
+0000/11/14 00:00:00 + 0.000    1407.5024               0.983071   233.8585
+0000/11/15 00:00:00 + 0.000    1407.7039               0.983000   234.8782
+0000/11/16 00:00:00 + 0.000    1407.8914               0.982935   235.8981
+0000/11/17 00:00:00 + 0.000    1408.0650               0.982874   236.9181
+0000/11/18 00:00:00 + 0.000    1408.2244               0.982819   237.9383
+0000/11/19 00:00:00 + 0.000    1408.3698               0.982768   238.9586
+0000/11/20 00:00:00 + 0.000    1408.5010               0.982722   239.9789
+0000/11/21 00:00:00 + 0.000    1408.6179               0.982681   240.9994
+0000/11/22 00:00:00 + 0.000    1408.7207               0.982646   242.0200
+0000/11/23 00:00:00 + 0.000    1408.8091               0.982615   243.0406
+0000/11/24 00:00:00 + 0.000    1408.8833               0.982589   244.0613
+0000/11/25 00:00:00 + 0.000    1408.9431               0.982568   245.0820
+0000/11/26 00:00:00 + 0.000    1408.9885               0.982552   246.1028
+0000/11/27 00:00:00 + 0.000    1409.0196               0.982541   247.1237
+0000/11/28 00:00:00 + 0.000    1409.0363               0.982536   248.1445
+0000/11/29 00:00:00 + 0.000    1409.0386               0.982535   249.1653
+0000/11/30 00:00:00 + 0.000    1409.0266               0.982539   250.1862
+0000/12/01 00:00:00 + 0.000    1409.0001               0.982548   251.2070
+0000/12/02 00:00:00 + 0.000    1408.9593               0.982562   252.2278
+0000/12/03 00:00:00 + 0.000    1408.9041               0.982582   253.2486
+0000/12/04 00:00:00 + 0.000    1408.8346               0.982606   254.2693
+0000/12/05 00:00:00 + 0.000    1408.7508               0.982635   255.2899
+0000/12/06 00:00:00 + 0.000    1408.6527               0.982669   256.3105
+0000/12/07 00:00:00 + 0.000    1408.5403               0.982709   257.3310
+0000/12/08 00:00:00 + 0.000    1408.4137               0.982753   258.3514
+0000/12/09 00:00:00 + 0.000    1408.2729               0.982802   259.3717
+0000/12/10 00:00:00 + 0.000    1408.1180               0.982856   260.3919
+0000/12/11 00:00:00 + 0.000    1407.9490               0.982915   261.4120
+0000/12/12 00:00:00 + 0.000    1407.7659               0.982979   262.4319
+0000/12/13 00:00:00 + 0.000    1407.5689               0.983048   263.4517
+0000/12/14 00:00:00 + 0.000    1407.3580               0.983121   264.4713
+0000/12/15 00:00:00 + 0.000    1407.1333               0.983200   265.4908
+0000/12/16 00:00:00 + 0.000    1406.8947               0.983283   266.5101
+0000/12/17 00:00:00 + 0.000    1406.6425               0.983371   267.5292
+0000/12/18 00:00:00 + 0.000    1406.3767               0.983464   268.5481
+0000/12/19 00:00:00 + 0.000    1406.0973               0.983562   269.5667
+0000/12/20 00:00:00 + 0.000    1405.8045               0.983664   270.5852
+0000/12/21 00:00:00 + 0.000    1405.4984               0.983771   271.6034
+0000/12/22 00:00:00 + 0.000    1405.1790               0.983883   272.6214
+0000/12/23 00:00:00 + 0.000    1404.8465               0.984000   273.6392
+0000/12/24 00:00:00 + 0.000    1404.5010               0.984121   274.6566
+0000/12/25 00:00:00 + 0.000    1404.1425               0.984246   275.6738
+0000/12/26 00:00:00 + 0.000    1403.7712               0.984376   276.6908
+0000/12/27 00:00:00 + 0.000    1403.3872               0.984511   277.7074
+0000/12/28 00:00:00 + 0.000    1402.9907               0.984650   278.7237
+0000/12/29 00:00:00 + 0.000    1402.5817               0.984794   279.7398
+0000/12/30 00:00:00 + 0.000    1402.1604               0.984942   280.7555
+0001/01/01 00:00:00 + 0.000    1401.7269               0.985094   281.7709
+
+INFO  [ATMOS_REFSTATE_setup] Setup
+INFO  [ATMOS_REFSTATE_setup] Not found namelist. Default used.
+&PARAM_ATMOS_REFSTATE
+ ATMOS_REFSTATE_IN_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ ATMOS_REFSTATE_OUT_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ ATMOS_REFSTATE_OUT_TITLE="SCALE-RM RefState                                                                                                               ",
+ ATMOS_REFSTATE_OUT_DTYPE="DEFAULT                         ",
+ ATMOS_REFSTATE_TYPE="UNIFORM                         ",
+ ATMOS_REFSTATE_TEMP_SFC=  300.00000000000000     ,
+ ATMOS_REFSTATE_RH=  0.0000000000000000     ,
+ ATMOS_REFSTATE_POTT_UNIFORM=  300.00000000000000     ,
+ ATMOS_REFSTATE_UPDATE_DT= -1.0000000000000000     ,
+ /
+
+INFO  [ATMOS_REFSTATE_setup] Reference state settings
+      Input file of reference state  : Nothing, generate internally
+      Output file of reference state : No output
+      Reference type                 : UNIFORM POTT
+      Potential temperature          :    300.00000000000000     
+
+INFO  [ATMOS_PHY_MP_driver_setup] Setup
+INFO  [ATMOS_PHY_MP_driver_setup] Not found namelist. Default used.
+&PARAM_ATMOS_PHY_MP
+ MP_DO_PRECIPITATION=T,
+ MP_DO_NEGATIVE_FIXER=T,
+ MP_LIMIT_NEGATIVE= 0.10000000000000001     ,
+ MP_NTMAX_SEDIMENTATION=1          ,
+ MP_MAX_TERM_VEL=  10.000000000000000     ,
+ MP_CLDFRAC_THLESHOLD=  2.2204460492503131E-016,
+ /
+
+INFO  [ATMOS_PHY_MP_driver_setup] Enable negative fixer?                    :  T
+INFO  [ATMOS_PHY_MP_driver_setup] Value limit of negative fixer (abs)       :   0.10000000000000001     
+INFO  [ATMOS_PHY_MP_driver_setup] Enable sedimentation (precipitation)?     :  T
+INFO  [ATMOS_PHY_MP_driver_setup] Timestep of sedimentation is divided into :            1 step
+INFO  [ATMOS_PHY_MP_driver_setup] DT of sedimentation                       :    0.0000000000000000      [s]
+
+INFO  [ATMOS_PHY_MP_tomita08_setup] Setup
+INFO  [ATMOS_PHY_MP_tomita08_setup] Tomita (2008) 1-moment bulk 6 category
+INFO  [ATMOS_PHY_MP_tomita08_setup] Not found namelist. Default used.
+&PARAM_ATMOS_PHY_MP_TOMITA08
+ DO_COUPLE_AEROSOL=F,
+ DO_EXPLICIT_ICEGEN=F,
+ AUTOCONV_NC=  50.000000000000000     ,
+ ENABLE_KK2000=F,
+ ENABLE_RS2014=F,
+ ENABLE_WDXZ2014=F,
+ ENABLE_HZDFHI2007=F,
+ CLOUD_TYPE="synoptic    ",
+ ENABLE_TRAWLBG2017=F,
+ N0R_DEF=  8000000.0000000000     ,
+ N0S_DEF=  3000000.0000000000     ,
+ N0G_DEF=  4000000.0000000000     ,
+ DENS_S=  100.00000000000000     ,
+ DENS_G=  400.00000000000000     ,
+ RE_QC=  7.9999999999999996E-006,
+ RE_QI=  4.0000000000000003E-005,
+ DRAG_G= 0.59999999999999998     ,
+ CR=  130.00000000000000     ,
+ CS=  4.8399999999999999     ,
+ EIW=  1.0000000000000000     ,
+ ERW=  1.0000000000000000     ,
+ ESW=  1.0000000000000000     ,
+ EGW=  1.0000000000000000     ,
+ ERI=  1.0000000000000000     ,
+ ESI=  1.0000000000000000     ,
+ EGI= 0.10000000000000001     ,
+ ESR=  1.0000000000000000     ,
+ EGR=  1.0000000000000000     ,
+ EGS=  1.0000000000000000     ,
+ GAMMA_SACR=  2.5000000000000001E-002,
+ GAMMA_GACS=  8.9999999999999997E-002,
+ MI=  4.1899999999999998E-013,
+ BETA_SAUT=  6.0000000000000001E-003,
+ GAMMA_SAUT=  5.9999999999999998E-002,
+ QICRT_SAUT=  0.0000000000000000     ,
+ BETA_GAUT=  0.0000000000000000     ,
+ GAMMA_GAUT=  8.9999999999999997E-002,
+ QSCRT_GAUT=  5.9999999999999995E-004,
+ FIXED_RE=F,
+ CONST_REC=T,
+ NOFALL_QR=F,
+ NOFALL_QI=F,
+ NOFALL_QS=F,
+ NOFALL_QG=F,
+ ECOAL_GI=  0.0000000000000000     ,
+ ECOAL_GS=  0.0000000000000000     ,
+ /
+
+INFO  [ATMOS_PHY_MP_tomita08_setup] density of the snow    [kg/m3] :    100.00000000000000     
+INFO  [ATMOS_PHY_MP_tomita08_setup] density of the graupel [kg/m3] :    400.00000000000000     
+INFO  [ATMOS_PHY_MP_tomita08_setup] Nc for auto-conversion [num/m3]:    50.000000000000000     
+INFO  [ATMOS_PHY_MP_tomita08_setup] Use k-k  scheme?               :  F
+INFO  [ATMOS_PHY_MP_tomita08_setup] Use Roh  scheme?               :  F
+INFO  [ATMOS_PHY_MP_tomita08_setup] Use WDXZ scheme?               :  F
+INFO  [ATMOS_PHY_MP_tomita08_setup] Use HZDFHI scheme?             :  F
+INFO  [ATMOS_PHY_MP_tomita08_setup] Use TRAWLBG scheme?            :  F
+
+INFO  [ATMOS_PHY_MP_tomita08_setup] Use effective radius of ice for snow and graupel,
+INFO  [ATMOS_PHY_MP_tomita08_setup]     and set rain transparent?          :  F
+INFO  [ATMOS_PHY_MP_tomita08_setup] Density of the ice is used for the calculation of 
+INFO  [ATMOS_PHY_MP_tomita08_setup]     optically effective volume of snow and graupel.
+INFO  [ATMOS_PHY_MP_tomita08_setup] Surpress sedimentation of rain?    :  F
+INFO  [ATMOS_PHY_MP_tomita08_setup] Surpress sedimentation of ice?     :  F
+INFO  [ATMOS_PHY_MP_tomita08_setup] Surpress sedimentation of snow?    :  F
+INFO  [ATMOS_PHY_MP_tomita08_setup] Surpress sedimentation of graupel? :  F
+INFO  [ATMOS_PHY_MP_tomita08_setup] Enable explicit ice generation?    :  F
+
+
+INFO  [ATMOS_PHY_BL_driver_setup] Setup
+INFO  [ATMOS_PHY_BL_driver_setup] this component is never called.
+
+INFO  [ATMOS_driver_setup] Finish setup of each atmospheric components.
+
+INFO  [CONVERT_setup] Setup
+INFO  [CONVERT_setup] Not found namelist. Default used.
+&PARAM_CONVERT
+ CONVERT_TOPO=F,
+ CONVERT_LANDUSE=F,
+ CONVERT_USER=F,
+ /
+
+INFO  [MKTOPO_setup] Setup
+INFO  [MKTOPO_setup] Not found namelist. Default used.
+&PARAM_MKTOPO
+ MKTOPO_NAME="NONE                            ",
+ /
+
+INFO  [MKINIT_setup] Setup
+&PARAM_MKINIT
+ MKINIT_INITNAME="SUPERCELL                       ",
+ /
+
+INFO  [BUBBLE_setup] Setup
+&PARAM_BUBBLE
+ BBL_EACHNODE=F,
+ BBL_CZ=  500.00000000000000     ,
+ BBL_CX=  250.00000000000000     ,
+ BBL_CY=  10000.000000000000     ,
+ BBL_RZ=  3000.0000000000000     ,
+ BBL_RX=  1.0000000000000000E+030,
+ BBL_RY=  4000.0000000000000     ,
+ BBL_FUNCTYPE="COSBELL                         ",
+ /
+
+INFO  [USER_setup] Setup
+INFO  [USER_setup] Not found namelist. Default used.
+&PARAM_USER
+ USER_DO=F,
+ /
+
+INFO  [USER_setup] This module is dummy.
+
++++++ skip  convert boundary data
+
+INFO  [MKTOPO] SKIP  MAKING TOPOGRAPHY DATA
+
+INFO  [ATMOS_GRID_CARTESC_REAL_calc_Z] Minimum & maximum lowermost CZ
+      -> (   40.000000000000000      ,   40.000000000000000      )
+INFO  [ATMOS_GRID_CARTESC_REAL_calc_Z] Minimum & maximum aspect ratio
+      -> (  0.40964828401778830      ,   6.2500000000000000      )
+
+INFO  [ATMOS_GRID_CARTESC_METRIC_setup] Setup
+INFO  [ATMOS_GRID_CARTESC_METRIC_setup] Not found namelist. Default used.
+&PARAM_ATMOS_GRID_CARTESC_METRIC
+ ATMOS_GRID_CARTESC_METRIC_OUT_BASENAME="                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+ ATMOS_GRID_CARTESC_METRIC_OUT_DTYPE="DEFAULT                         ",
+ ATMOS_GRID_CARTESC_METRIC_TOPO_TYPE="TERRAINFOLLOWING                ",
+ ATMOS_GRID_CARTESC_METRIC_THINWALL_XDIV=50         ,
+ ATMOS_GRID_CARTESC_METRIC_THINWALL_YDIV=50         ,
+ /
+
+INFO  [ATMOS_GRID_CARTESC_METRIC_setup] Terrain coordinate type : TERRAINFOLLOWING
+      => Terrain-following method
+
++++++ start making initial data
+
+INFO  [MKINIT_supercell] Setup initial state
+&PARAM_MKINIT_SUPERCELL
+ BBL_THETA=  3.0000000000000000     ,
+ /
+&PARAM_MKINIT_SOUNDING
+ ENV_IN_SOUNDING_FILE="env.txt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ",
+ /
+INFO  [read_sounding] Input sounding file:env.txt
+INFO  [read_sounding] + Surface pressure [hPa]   1006.0000000000000     
+INFO  [read_sounding] + Surface pot. temp  [K]   301.30000000000001     
+INFO  [read_sounding] + Surface water vapor [g/kg]   23.199999999999999     
+INFO  [flux_setup] Not found namelist. Default used.
+&PARAM_MKINIT_FLUX
+ FLX_RAIN=  0.0000000000000000     ,
+ FLX_SNOW=  0.0000000000000000     ,
+ FLX_IR_DN=  0.0000000000000000     ,
+ FLX_NIR_DN=  0.0000000000000000     ,
+ FLX_VIS_DN=  0.0000000000000000     ,
+ /
+INFO  [tke_setup] Not found namelist. Default used.
+&PARAM_MKINIT_TKE
+ TKE_CONST=  2.2204460492503131E-016,
+ ZI_CONST=  100.00000000000000     ,
+ /
++++++ end   making initial data
+
+INFO  [ATMOS_vars_restart_create] Create restart file (ATMOS) 
+INFO  [ATMOS_vars_restart_create] basename: init_00000101-000000.000
+
+INFO  [FILE_get_fid] Registration ( WRITE) : No.001, name = init_00000101-000000.000.pe000000
+INFO  [FILE_def_variable] Variable registration : NO.001, vid = 0001, name = DENS
+INFO  [FILE_def_variable] Variable registration : NO.001, vid = 0002, name = MOMZ
+INFO  [FILE_def_variable] Variable registration : NO.001, vid = 0003, name = MOMX
+INFO  [FILE_def_variable] Variable registration : NO.001, vid = 0004, name = MOMY
+INFO  [FILE_def_variable] Variable registration : NO.001, vid = 0005, name = RHOT
+INFO  [FILE_def_variable] Variable registration : NO.001, vid = 0006, name = QV
+INFO  [FILE_def_variable] Variable registration : NO.001, vid = 0007, name = QC
+INFO  [FILE_def_variable] Variable registration : NO.001, vid = 0008, name = QR
+INFO  [FILE_def_variable] Variable registration : NO.001, vid = 0009, name = QI
+INFO  [FILE_def_variable] Variable registration : NO.001, vid = 0010, name = QS
+INFO  [FILE_def_variable] Variable registration : NO.001, vid = 0011, name = QG
+
+INFO  [FILE_enddef] End define mode : No.001, name = init_00000101-000000.000.pe000000
+
+INFO  [STATISTICS_detail_3D] Variable Statistics 
+      [W]
+        MAX =-9.9999000000E+30 (rank=    0;     3,    1,    3)
+        MIN =-9.9999000000E+30 (rank=    0;     3,    1,    3)
+      [U]
+        MAX =-9.9999000000E+30 (rank=    0;     3,    1,    3)
+        MIN =-9.9999000000E+30 (rank=    0;     3,    1,    3)
+      [V]
+        MAX =-9.9999000000E+30 (rank=    0;     3,    1,    3)
+        MIN =-9.9999000000E+30 (rank=    0;     3,    1,    3)
+
+INFO  [STATISTICS_total_3D] [                    DENS] MEAN(global) =  4.81347253828142252E-01
+INFO  [STATISTICS_total_3D] [                    MOMZ] MEAN(global) =  0.00000000000000000E+00
+INFO  [STATISTICS_total_3D] [                    MOMX] MEAN(global) =  0.00000000000000000E+00
+INFO  [STATISTICS_total_3D] [                    MOMY] MEAN(global) =  2.26846516875356086E+00
+INFO  [STATISTICS_total_3D] [                    RHOT] MEAN(global) =  1.58329749124559385E+02
+INFO  [STATISTICS_total_3D] [                      QV] MEAN(global) =  3.13050872396880694E-03
+INFO  [STATISTICS_total_3D] [                      QC] MEAN(global) =  0.00000000000000000E+00
+INFO  [STATISTICS_total_3D] [                      QR] MEAN(global) =  0.00000000000000000E+00
+INFO  [STATISTICS_total_3D] [                      QI] MEAN(global) =  0.00000000000000000E+00
+INFO  [STATISTICS_total_3D] [                      QS] MEAN(global) =  0.00000000000000000E+00
+INFO  [STATISTICS_total_3D] [                      QG] MEAN(global) =  0.00000000000000000E+00
+INFO  [STATISTICS_total_3D] [                    QDRY] MEAN(global) =  4.78216745104173113E-01
+INFO  [STATISTICS_total_3D] [                    QTOT] MEAN(global) =  3.13050872396880868E-03
+INFO  [STATISTICS_total_3D] [                    ENGT] MEAN(global) =  1.31611013659955526E+05
+INFO  [STATISTICS_total_3D] [                    ENGP] MEAN(global) =  3.10439775857642308E+04
+INFO  [STATISTICS_total_3D] [                    ENGK] MEAN(global) =  5.55725596439271374E+00
+INFO  [STATISTICS_total_3D] [                    ENGI] MEAN(global) =  1.00561478818226897E+05
+
+INFO  [ATMOS_vars_restart_close] Close restart file (ATMOS) 
+
+INFO  [FILE_close] Close : No.001, name = init_00000101-000000.000.pe000000
+
+INFO  [ATMOS_GRID_CARTESC_METRIC_finalize] Finalize
+
+INFO  [MKINIT_finalize] Finalize
+
+INFO  [ATMOS_driver_finalize] Finalize
+
+INFO  [ATMOS_PHY_MP_driver_finalize] Finalize
+
+INFO  [ATMOS_PHY_BL_driver_finalize] Finalize
+
+INFO  [ATMOS_vars_finalize] Finalize
+
+INFO  [ATMOS_DYN_vars_finalize] Finalize
+
+INFO  [ATMOS_PHY_MP_vars_finalize] Finalize
+
+INFO  [ATMOS_PHY_AE_vars_finalize] Finalize
+
+INFO  [ATMOS_PHY_CH_vars_finalize] Finalize
+
+INFO  [ATMOS_PHY_RD_vars_finalize] Finalize
+
+INFO  [ATMOS_PHY_SF_vars_finalize] Finalize
+
+INFO  [ATMOS_PHY_TB_vars_finalize] Finalize
+
+INFO  [ATMOS_PHY_BL_vars_finalize] Finalize
+
+INFO  [ATMOS_PHY_CP_vars_finalize] Finalize
+
+INFO  [ATMOS_PHY_LT_vars_finalize] Finalize
+
+INFO  [LANDUSE_finalize] Finalize
+
+INFO  [ATMOS_HYDROMETEOR_finalize] Finalize
+
+INFO  [PROF_rapreport] Computational Time Report (Rap level =  2)
+ INIT Initialize                  lev= 0: T(avg)=     0.024, T(max)=     0.024[     2], T(min)=     0.023[     1], N=        1
+ INIT ATM_Boundary                lev= 2: T(avg)=     0.000, T(max)=     0.000[     2], T(min)=     0.000[     1], N=        1
+ INIT ATM_Refstate                lev= 2: T(avg)=     0.007, T(max)=     0.011[     1], T(min)=     0.003[     2], N=        1
+ INIT COMM_Bcast                  lev= 2: T(avg)=     0.000, T(max)=     0.000[     2], T(min)=     0.000[     1], N=        1
+ INIT COMM_vars                   lev= 2: T(avg)=     0.000, T(max)=     0.001[     2], T(min)=     0.000[     1], N=        5
+ INIT COMM_wait                   lev= 2: T(avg)=     0.005, T(max)=     0.010[     1], T(min)=     0.000[     2], N=        5
+ MAIN Main_prep                   lev= 0: T(avg)=     0.051, T(max)=     0.051[     1], T(min)=     0.050[     2], N=        1
+ MAIN ATM_Diag                    lev= 1: T(avg)=     0.000, T(max)=     0.000[     2], T(min)=     0.000[     1], N=        1
+ MAIN ATM_Restart                 lev= 1: T(avg)=     0.048, T(max)=     0.048[     1], T(min)=     0.048[     2], N=        5
+ MAIN Convert                     lev= 1: T(avg)=     0.000, T(max)=     0.000[     1], T(min)=     0.000[     2], N=        1
+ MAIN Debug                       lev= 1: T(avg)=     0.000, T(max)=     0.000[     2], T(min)=     0.000[     1], N=        5
+ MAIN File                        lev= 1: T(avg)=     0.000, T(max)=     0.000[     2], T(min)=     0.000[     1], N=        1
+ MAIN LND_Restart                 lev= 1: T(avg)=     0.000, T(max)=     0.000[     2], T(min)=     0.000[     1], N=        5
+ MAIN MkInit                      lev= 1: T(avg)=     0.001, T(max)=     0.001[     2], T(min)=     0.001[     1], N=        1
+ MAIN MkInit_restart              lev= 1: T(avg)=     0.048, T(max)=     0.048[     1], T(min)=     0.048[     2], N=        1
+ MAIN MkTopo                      lev= 1: T(avg)=     0.000, T(max)=     0.000[     1], T(min)=     0.000[     2], N=        1
+ MAIN OCN_Restart                 lev= 1: T(avg)=     0.000, T(max)=     0.000[     2], T(min)=     0.000[     1], N=        5
+ MAIN URB_Restart                 lev= 1: T(avg)=     0.000, T(max)=     0.000[     2], T(min)=     0.000[     1], N=        5
+ MAIN ATM_SfcExch                 lev= 2: T(avg)=     0.000, T(max)=     0.000[     2], T(min)=     0.000[     1], N=        1
+ MAIN COMM_Allreduce              lev= 2: T(avg)=     0.000, T(max)=     0.000[     2], T(min)=     0.000[     1], N=       17
+ MAIN COMM_Bcast                  lev= 2: T(avg)=     0.000, T(max)=     0.000[     1], T(min)=     0.000[     2], N=        1
+ MAIN COMM_vars                   lev= 2: T(avg)=     0.000, T(max)=     0.000[     2], T(min)=     0.000[     1], N=       30
+ MAIN COMM_wait                   lev= 2: T(avg)=     0.012, T(max)=     0.023[     1], T(min)=     0.000[     2], N=       30
+ MAIN FILE                        lev= 2: T(avg)=     0.007, T(max)=     0.008[     2], T(min)=     0.005[     1], N=        2
+ MAIN FILE_Write                  lev= 2: T(avg)=     0.036, T(max)=     0.047[     2], T(min)=     0.025[     1], N=       25
+
++++++ Closing LOG file
