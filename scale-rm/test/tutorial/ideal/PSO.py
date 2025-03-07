@@ -118,8 +118,8 @@ def predict(inputs,t):
             ["mpirun", "-n", "20", "scale-rm", "run.launch.conf"],
             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         # 結果の標準出力・標準エラーを表示
-        print(result.stdout.decode())
-        print(result.stderr.decode())
+        # print(result.stdout.decode())
+        # print(result.stderr.decode())
         # 各ジョブの当該ステップでの評価値（降水量）を計算
         step_result = np.zeros(n) 
         for i in range(n):
