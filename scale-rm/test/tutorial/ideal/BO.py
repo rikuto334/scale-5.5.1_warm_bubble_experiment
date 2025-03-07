@@ -111,8 +111,8 @@ def predict(inputs,t):
         result = subprocess.run(
             ["mpirun", "--oversubscribe" ,"-n", "20", "scale-rm", "run.launch.conf"],
             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        print(result.stdout.decode())
-        print(result.stderr.decode())
+        # print(result.stdout.decode())
+        # print(result.stderr.decode())
         
         # 各ジョブのシミュレーション結果から評価値（降水量）を算出
         step_result = [0]*n # 各ジョブのステップ毎の降水量を初期化
