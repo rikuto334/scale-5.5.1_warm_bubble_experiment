@@ -117,8 +117,8 @@ def predict(inputs,t):
             ["mpirun", "-n", "20", "scale-rm", "run.launch.conf"],
             stdout=subprocess.PIPE, stderr=subprocess.PIPE)
         
-        print(result.stdout)
-        print(result.stderr)
+        # print(result.stdout)
+        # print(result.stderr)
 
         # 各個体の今回のタイムステップにおける評価値（降水量）を算出
         step_result = np.zeros(n) 
